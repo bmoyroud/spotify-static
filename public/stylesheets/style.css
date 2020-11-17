@@ -47,13 +47,17 @@ hr {
   height: 1px;
 }
 
+h1,
 h2 {
-  font-size: 24px;
-  font-weight: 700;
   color: #fff;
   letter-spacing: -0.04em;
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .container {
@@ -269,9 +273,9 @@ h2 {
   padding: 16px 32px;
 }
 
-.content h2 {
+/* .content h2 {
   margin-bottom: 16px;
-}
+} */
 
 .recently-played {
   display: grid;
@@ -306,6 +310,55 @@ h2 {
 
 .card span {
   margin-top: 4px;
+}
+
+/* PLAYLIST PAGE page (e.g. /collection/tracks or /playlist/37i9dQZF1DX742okrrpwah) */
+.playlist-header {
+  display: flex;
+}
+
+.playlist-header > img {
+  height: 232px;
+  width: 232px;
+  margin-right: 16px;
+}
+
+.playlist-header-info {
+  align-self: end;
+  /* TODO: explain why display: flex is necessary here 
+  display: flex only applies to children (direct descendants) not descendants
+  https://stackoverflow.com/a/14151015/4658957 */
+  display: flex;
+  flex-direction: column;
+}
+
+.playlist-header-info > h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.playlist-header-info > h1 {
+  padding: 0.08em 0px;
+  font-size: 96px;
+}
+
+.playlist-header-details {
+  display: flex;
+}
+
+.playlist-header-details > a {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.playlist-header-details > a:hover {
+  text-decoration: underline;
+}
+
+.playlist-header-details > span::before {
+  content: "•";
+  margin: 0 4px;
 }
 
 /* Fonts */
