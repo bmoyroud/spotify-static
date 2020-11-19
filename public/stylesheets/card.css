@@ -15,12 +15,16 @@
   margin-bottom: 16px;
   position: relative;
   width: 100%;
-  height: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .card-image img {
+  display: block;
   width: 100%;
-  height: 100%;
+}
+
+.card-image-round {
+  border-radius: 50%;
 }
 
 .round-button {
@@ -63,6 +67,11 @@
   font-weight: 700;
   line-height: 24px;
   color: #fff;
+}
+
+.card-subtitle {
+  display: flex;
+  letter-spacing: normal;
 }
 
 .bullet-separator::before {
