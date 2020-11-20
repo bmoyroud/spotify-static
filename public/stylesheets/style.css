@@ -37,7 +37,7 @@ button:hover {
 }
 
 a {
-  color: var(--light-grey);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -96,6 +96,10 @@ h2 {
   color: #fff;
   background-color: var(--dark-grey);
   border-radius: 4px;
+}
+
+.nav-bar a {
+  color: var(--light-grey);
 }
 
 .nav-bar {

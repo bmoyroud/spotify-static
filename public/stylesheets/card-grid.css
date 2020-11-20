@@ -1,0 +1,33 @@
+.card-grid-header {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.card-grid-titles {
+  flex: 1;
+}
+
+.card-grid-title a:hover {
+  text-decoration: underline;
+}
+
+.card-grid-see-all {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--light-grey);
+  text-transform: uppercase;
+}
+
+.card-grid-see-all:hover {
+  text-decoration: underline;
+}
+
+.card-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  column-gap: 24px;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 0;
+  overflow-y: hidden;
+}
