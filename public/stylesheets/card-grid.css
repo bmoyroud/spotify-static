@@ -26,14 +26,13 @@
 .card-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 24px;
+}
+
+.collapsed {
   column-gap: 24px;
+  row-gap: 0px;
   grid-template-rows: 1fr;
   grid-auto-rows: 0;
   overflow-y: hidden;
-}
-
-.card-grid-container-expanded {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  grid-gap: 24px;
 }
