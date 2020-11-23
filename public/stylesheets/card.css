@@ -63,7 +63,7 @@
   -webkit-line-clamp: 2;
 }
 
-.bullet-separator::before {
+.card__subtitle span:not(:first-child)::before {
   content: "•";
   margin: 0 4px;
 }
