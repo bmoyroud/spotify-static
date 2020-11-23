@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Components - Artist Card</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/utilities.css" />
+    <link rel="stylesheet" href="/stylesheets/card.css" />
+    <link rel="stylesheet" href="/stylesheets/button.css" />
+  </head>
+
+  <body>
+    <div
+      style="
+        padding: 8px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-gap: 24px;
+      "
+    >
+      <!-- Artist Card -->
+      <!-- Future - Artist -->
+      <div class="card">
+        <div class="card__image-wrapper">
+          <img
+            class="card__image card__image--artist"
+            src="https://i.scdn.co/image/fa9015ca2bf85af90b967500148da9706a156e3b"
+          />
+          <div class="card__button-wrapper">
+            <button
+              class="card__button center button--small button--round button--green"
+            >
+              <svg height="16" width="16" viewBox="0 0 24 24">
+                <polygon
+                  points="21.57 12 5.98 3 5.98 21 21.57 12"
+                  fill="currentColor"
+                ></polygon>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <h3 class="card__title">Future</h3>
+        <div class="card__subtitle">
+          <span>Artist</span>
+        </div>
+      </div>
+      <!-- End Future - Artist -->
+    </div>
+  </body>
+</html>

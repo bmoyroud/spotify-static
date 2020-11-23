@@ -11,22 +11,22 @@
 
 .card__image-wrapper {
   margin-bottom: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
   position: relative;
 }
 
 .card__image {
   width: 100%;
   display: block;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .card__image--podcast {
   border-radius: 7.5%;
 }
 
-/* .card-image-round {
+.card__image--artist {
   border-radius: 50%;
-} */
+}
 
 .card__button-wrapper {
   position: absolute;
