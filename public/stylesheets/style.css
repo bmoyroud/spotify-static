@@ -247,6 +247,7 @@ h2 {
 }
 
 .main-view {
+  position: relative;
   background-color: var(--black);
   grid-area: main-view;
   overflow-y: auto;
@@ -259,6 +260,7 @@ h2 {
   display: flex;
   align-items: center;
   padding: 0 32px;
+  z-index: 1;
 }
 
 .top-bar button {
