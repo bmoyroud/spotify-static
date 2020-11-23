@@ -20,6 +20,10 @@
   display: block;
 }
 
+.card__image--podcast {
+  border-radius: 7.5%;
+}
+
 /* .card-image-round {
   border-radius: 50%;
 } */
