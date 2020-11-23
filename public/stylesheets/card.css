@@ -1,6 +1,4 @@
 .card {
-  display: flex;
-  flex-direction: column;
   padding: 16px;
   border-radius: 4px;
   background-color: #181818;
@@ -11,68 +9,58 @@
   background-color: #282828;
 }
 
-.card-image {
+.card__image-wrapper {
   margin-bottom: 16px;
-  position: relative;
-  width: 100%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
-.card-image img {
-  display: block;
+.card__image {
   width: 100%;
+  display: block;
 }
 
-.card-image-round {
+/* .card-image-round {
   border-radius: 50%;
-}
+} */
 
-.round-button {
-  /* TODO: remove opacity: 0.7 globally on all buttons */
-  opacity: 1;
-
-  border: 0;
-  border-radius: 500px;
-  color: #fff;
-  background-color: #1db954;
-  height: 40px;
-  width: 40px;
-}
-
-.round-button:hover {
-  transform: scale(1.06);
-}
-
-.card-play-button {
+.card__button-wrapper {
   position: absolute;
   bottom: 8px;
   right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
-  /* animation */
+  /* transition */
   opacity: 0;
   transform: translateY(8px);
   transition-property: transform, opacity;
   transition-duration: 0.3s;
 }
 
-.card:hover .card-play-button {
+.card__button {
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card__button-wrapper {
   opacity: 1;
   transform: translateY(0px);
 }
 
-.card a {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  color: #fff;
+.card__button:hover {
+  transform: scale(1.06);
 }
 
-.card-subtitle {
-  display: flex;
-  letter-spacing: normal;
+.card__title {
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+
+.card__subtitle {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
 }
 
 .bullet-separator::before {

@@ -1,0 +1,21 @@
+.button {
+}
+
+.button--round {
+  border: 0;
+  border-radius: 50%;
+}
+
+.button--round:hover {
+  transform: scale(1.06);
+}
+
+.button--green {
+  color: #fff;
+  background-color: #1db954;
+}
+
+.button--small {
+  height: 40px;
+  width: 40px;
+}
