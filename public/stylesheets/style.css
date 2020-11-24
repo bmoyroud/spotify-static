@@ -67,10 +67,6 @@ h3 {
   font-weight: 700;
 }
 
-span {
-  color: var(--light-grey);
-}
-
 .container {
   height: 100%;
   display: grid;
