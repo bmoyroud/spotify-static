@@ -74,3 +74,12 @@
   content: "•";
   margin: 0 4px;
 }
+
+.card__subtitle-link {
+  font-size: 14px;
+  color: var(--light-grey);
+}
+
+.card__subtitle-link:hover {
+  text-decoration: underline;
+}
