@@ -12,19 +12,21 @@
 .card__image-wrapper {
   margin-bottom: 16px;
   position: relative;
+  padding-bottom: 100%;
 }
 
 .card__image {
+  position: absolute;
   width: 100%;
-  display: block;
+  height: 100%;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-.card__image--podcast {
+.card__image--rounded {
   border-radius: 7.5%;
 }
 
-.card__image--artist {
+.card__image--round {
   border-radius: 50%;
 }
 
