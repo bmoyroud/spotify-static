@@ -50,15 +50,9 @@ button:hover {
 }
 
 a {
+  /* TODO: do we apply color here? */
   color: #fff;
   text-decoration: none;
-}
-
-hr {
-  margin: 8px 24px;
-  border: none;
-  background-color: var(--dark-grey);
-  height: 1px;
 }
 
 h1,
@@ -80,17 +74,23 @@ h3 {
   font-weight: 700;
 }
 
-/* TODO: set this as default? */
-/* span {
-  color: #fff;
+/* TODO: set this as default? default color and default weight? */
+span {
+  /* color: #fff; */
   font-size: 14px;
+  font-weight: 400;
+}
+
+span.bold {
+  letter-spacing: normal;
   font-weight: 700;
-} */
+}
 
 /* TODO: add reset */
 ul,
 ol {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -102,132 +102,6 @@ ol {
   grid-template-areas:
     "nav-bar main-view buddy-feed"
     "now-playing-bar now-playing-bar now-playing-bar";
-}
-
-.icon {
-  margin-right: 16px;
-  width: 24px;
-  height: 24px;
-}
-
-.heading {
-  font-size: 14px;
-  font-weight: 700;
-  height: 40px;
-  letter-spacing: normal;
-  text-transform: none;
-}
-
-.heading-normal {
-  font-size: 14px;
-  font-weight: 400;
-  cursor: default;
-  height: 32px;
-}
-
-.nav-selected {
-  color: #fff;
-  background-color: var(--dark-grey);
-  border-radius: 4px;
-}
-
-.nav-bar a {
-  color: var(--light-grey);
-}
-
-.nav-bar {
-  background-color: rgba(0, 0, 0, 0.8);
-  grid-area: nav-bar;
-  width: 232px;
-  overflow-y: auto;
-}
-
-.spotify-logo--text {
-  width: 131px;
-  height: 40px;
-}
-
-.nav-bar {
-  display: flex;
-  flex-direction: column;
-  padding-top: 24px;
-  user-select: none;
-}
-
-.logo {
-  display: flex;
-  color: #fff;
-  margin-bottom: 18px;
-  padding-left: 24px;
-}
-
-.nav-bar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-}
-
-.nav-bar li {
-  padding: 0px 8px;
-}
-
-.nav-bar ul a {
-  display: flex;
-  align-items: center;
-  padding: 0px 16px;
-}
-
-.nav-bar ul a:hover {
-  color: #fff;
-}
-
-.nav-bar-playlists {
-  display: flex;
-  flex-direction: column;
-  margin-top: 24px;
-  overflow-y: auto;
-}
-
-.nav-bar-playlists h1 {
-  margin: 0 var(--left-sidebar-padding-left) 12px
-    var(--left-sidebar-padding-right);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.nav-bar-playlists ul {
-  overflow-y: auto;
-}
-
-.create-playlist-button,
-.liked-songs-button {
-  display: flex;
-  align-items: center;
-  padding: 5px var(--left-sidebar-padding-right);
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.create-playlist-svg {
-  background: #fff;
-  width: 32px;
-  height: 32px;
-  padding: 4px;
-  fill: #000;
-  margin-right: 16px;
-  box-sizing: border-box;
-}
-
-.create-playlist-button:hover {
-  color: #fff;
-}
-
-/* TODO: improve CSS to remove below */
-.create-playlist-button span {
-  height: auto;
 }
 
 .now-playing-bar {
@@ -494,6 +368,7 @@ ol {
 }
 
 /* Fonts */
+/* TODO: is this used? */
 @font-face {
   font-family: spotify-circular;
   src: url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Light.afd9ab26.woff2)
