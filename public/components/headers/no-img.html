@@ -9,6 +9,7 @@
 
     <title>Spotify</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/top-bar.css" />
     <link rel="stylesheet" href="/stylesheets/header.css" />
   </head>
 
@@ -157,7 +158,16 @@
           <div class="extra-controls"></div>
         </div>
         <main class="main-view">
+          <!-- <div class="content"> -->
           <div class="top-bar">
+            <div
+              class="top-bar__background"
+              style="background-color: rgb(245, 155, 35);"
+            ></div>
+            <div
+              class="top-bar__background"
+              style="background-color: rgba(0, 0, 0, 0.6);"
+            ></div>
             <button>
               <svg height="24" width="24" viewBox="0 0 24 24">
                 <polyline
@@ -176,21 +186,45 @@
                 ></polyline>
               </svg>
             </button>
+            <h2 class="top-bar__title">Hip Hop</h2>
           </div>
-          <div class="content">
-            <header class="header">
-              <div
-                class="header-background"
-                style="background-color: rgb(245, 155, 35);"
-              ></div>
-              <div class="header-background-gradient"></div>
-              <div class="header-content">
-                <h1 class="header-title">Hip Hop</h1>
-              </div>
-            </header>
+
+          <!-- <div style="height: 60px; border: solid 3px blue;"></div> -->
+
+          <header class="header">
+            <div
+              class="header__sentinel"
+              style="height: 60px; border: solid 3px red;"
+            ></div>
+            <div
+              class="header__background"
+              style="background-color: rgb(245, 155, 35);"
+            ></div>
+            <div class="header__background header__background--gradient"></div>
+            <div class="header__content">
+              <h1 class="header__title">Hip Hop</h1>
+            </div>
+          </header>
+
+          <!-- Content -->
+          <div
+            style="
+              height: 1000px;
+              border: solid 3px blue;
+              position: relative;
+              top: -60px;
+            "
+          >
+            <!-- <div
+              class="header__sentinel"
+              style="height: 60px; border: solid 3px red;"
+            ></div> -->
           </div>
+          <!-- </div> -->
         </main>
       </div>
     </div>
+
+    <script src="/js/top-bar.js"></script>
   </body>
 </html>

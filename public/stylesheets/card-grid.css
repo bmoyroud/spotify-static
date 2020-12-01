@@ -1,35 +1,35 @@
-.card-grid-header {
+.card-grid__header {
   display: flex;
   align-items: flex-end;
   margin-bottom: 16px;
 }
 
-.card-grid-titles {
+.card-grid__titles {
   flex: 1;
 }
 
-.card-grid-title a:hover {
+.card-grid__title a:hover {
   text-decoration: underline;
 }
 
-.card-grid-see-all {
+.card-grid__see-all {
   font-size: 12px;
   font-weight: 700;
   color: var(--light-grey);
   text-transform: uppercase;
 }
 
-.card-grid-see-all:hover {
+.card-grid__see-all:hover {
   text-decoration: underline;
 }
 
-.card-grid-container {
+.card-grid__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   grid-gap: 24px;
 }
 
-.collapsed {
+.card-grid__container--collapsed {
   column-gap: 24px;
   row-gap: 0px;
   grid-template-rows: 1fr;

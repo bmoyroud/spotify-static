@@ -1,0 +1,252 @@
+.top-bar {
+  position: sticky;
+  height: 60px;
+  /* if top: 0 is removed, top-bar does not stick */
+  top: 0;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+/* BACKGROUNDS */
+.top-bar__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* move background div behind top bar buttons, content and menu  */
+  z-index: -1;
+  opacity: 0;
+}
+
+/* .top-bar__background--visible {
+  opacity: 1;
+} */
+
+/* BUTTONS (left) */
+.top-bar__button {
+  border: 0;
+  outline: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.top-bar__button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.top-bar__button {
+  stroke-width: 1pt;
+}
+
+/* CONTENT (middle) */
+.top-bar__content {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
+.top-bar__content-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  opacity: 0;
+}
+
+.top-bar__content-button--visible {
+  opacity: 1;
+}
+
+.top-bar__title {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+}
+
+.top-bar__title--visible {
+  opacity: 1;
+}
+
+/* Search input */
+.top-bar__search {
+  max-width: 350px;
+  background: #fff;
+  border-radius: 500px;
+  display: flex;
+  align-items: center;
+  /* allows icons to position themselves */
+  position: relative;
+}
+
+.top-bar__search-icon {
+  position: absolute;
+  left: 12px;
+  color: #121212;
+}
+
+.top-bar__search-cancel-icon {
+  position: absolute;
+  right: 12px;
+  color: #121212;
+  /* cancel icon needs to be above input to be clickable */
+  z-index: 2;
+  /* hide by default */
+  display: none;
+}
+
+.top-bar__search-input {
+  width: 100%;
+  height: 40px;
+  padding: 6px 48px;
+  border: 0;
+  /* overlap search icon */
+  z-index: 1;
+  background: transparent;
+  /* shows ... in placeholder when input is collapsed */
+  text-overflow: ellipsis;
+}
+
+/* toggle cancel search icon */
+.top-bar__search-input:invalid {
+  box-shadow: none;
+}
+
+.top-bar__search-input:valid + .top-bar__search-cancel-icon {
+  display: block;
+}
+/* end Search input */
+
+/* Tabs */
+.top-bar__tabs {
+  display: flex;
+}
+
+.top-bar__tab {
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-right: 8px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.top-bar__tab--active {
+  background-color: #333;
+}
+/* end Tabs */
+
+/* MENU (right) */
+.top-bar__menu {
+  /* for dropdown to position itself relative to top-bar__menu */
+  position: relative;
+}
+
+.top-bar__menu-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+  padding: 2px;
+  /* align items vertically */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 16px; /* for dropdown to expand to the left */
+}
+
+/* all children */
+.top-bar__menu-button > * {
+  margin-right: 8px;
+}
+
+.top-bar__menu-button:hover {
+  background-color: #282828;
+}
+
+.top-bar__menu-checkbox-label {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  /* adjust for margin-left: 16px */
+  left: 16px;
+  width: calc(100% - 16px);
+  cursor: pointer; /* label has a higher z-index thant top-bar__menu-button */
+}
+
+.top-bar__menu-checkbox {
+  display: none;
+}
+
+.top-bar__menu-checkbox:checked + .top-bar__dropdown {
+  display: block;
+}
+
+.top-bar__avatar {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-color: #333;
+  /* center svg in button both horizontally and vertically */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-bar__user {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.top-bar__dropdown {
+  display: none; /* hidden by default */
+  position: absolute;
+  top: 100%;
+  right: 0; /* align right edge */
+  margin: 8px 0px 0px 0px; /* separate menu-button and dropdown */
+  background-color: #282828;
+  border-radius: 4px;
+  width: 100%;
+  list-style: none; /* remove bullet points */
+  padding: 4px;
+  cursor: default;
+}
+
+.top-bar__dropdown-item {
+  color: hsla(0, 0%, 100%, 0.7);
+  padding: 3px 4px 3px 8px;
+  line-height: 32px;
+  cursor: default;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  /* for log out button */
+  background: none;
+  border: 0;
+  text-align: start;
+
+  border-radius: 2px; /* rounded corners visible on hover */
+}
+
+.top-bar__dropdown-item:hover {
+  color: #fff;
+  background-color: hsla(0, 0%, 100%, 0.1);
+}
+
+.top-bar__dropdown-separator {
+  height: 0;
+  border-top: 1px solid #404040;
+}
