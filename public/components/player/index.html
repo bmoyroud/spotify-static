@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Spotify</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/player.css" />
+    <link rel="stylesheet" href="/stylesheets/range-input.css" />
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="container">
+        <footer class="player">
+          <!-- Track details (left) -->
+          <div class="player__track">
+            <img
+              class="player__cover"
+              src="https://i.scdn.co/image/ab67616d00004851b63abc19cc0b78c17030db5f"
+            />
+            <div class="player__details">
+              <a href="/album" class="player__title">Train Wreck - Acoustic</a>
+              <ul class="player__artists">
+                <li class="player__artist">
+                  <a class="player__artist-link" href="/artist">James Arthur</a>
+                </li>
+                <li class="player__artist">
+                  <a class="player__artist-link" href="/artist">Artist 2</a>
+                </li>
+              </ul>
+            </div>
+            <button class="player__like">
+              <svg height="16" width="16" viewBox="0 0 16 16">
+                <path fill="none" d="M0 0h16v16H0z"></path>
+                <path
+                  stroke="currentColor"
+                  d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Track controls (center) -->
+          <div class="player__track-controls">
+            <div class="player__playback-controls">
+              <!-- Shuffle -->
+              <button class="player__playback-control" title="Enable shuffle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"
+                  />
+                </svg>
+              </button>
+
+              <!-- Previous  -->
+              <button class="player__playback-control" title="Previous">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M6 6h2v12H6V6zm3.5 6l8.5 6V6l-8.5 6z" />
+                </svg>
+              </button>
+
+              <!-- Play / Pause -->
+              <button class="player__playback-control" title="Play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M8 5v14l11-7L8 5z" />
+                </svg>
+              </button>
+
+              <!-- Next -->
+              <button class="player__playback-control" title="Next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                </svg>
+              </button>
+
+              <!-- Repeat -->
+              <button class="player__playback-control" title="Enable repeat">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="player__playback-bar">
+              <span class="player__playback-time">0:35</span>
+              <input
+                class="player__volume-slider"
+                type="range"
+                onchange="console.log(this.value);"
+              />
+              <span class="player__playback-time">3:09</span>
+            </div>
+          </div>
+
+          <!-- Audio controls (right) -->
+          <div class="player__audio-controls">
+            <!-- Queue -->
+            <button class="player__playback-control" title="Queue">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path d="M4 10h12v2H4zm0-4h12v2H4zm0 8h8v2H4zm10 0v6l5-3z" />
+              </svg>
+            </button>
+
+            <!-- Devices -->
+            <button class="player__playback-control" title="Devices">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <g>
+                  <rect fill="none" height="24" width="24" />
+                  <rect fill="none" height="24" width="24" />
+                  <rect fill="none" height="24" width="24" />
+                </g>
+                <g>
+                  <path
+                    d="M6,22h12l-6-6L6,22z M23,3H1v16h6v-2H3V5h18v12h-4v2h6V3z"
+                  />
+                </g>
+              </svg>
+            </button>
+
+            <!-- Volume -->
+            <div class="player__volume">
+              <button class="player__playback-control" title="Volume">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z"
+                  />
+                </svg>
+              </button>
+              <input
+                class="player__volume-slider"
+                type="range"
+                onchange="console.log(this.value);"
+              />
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

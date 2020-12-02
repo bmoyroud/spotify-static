@@ -1,0 +1,118 @@
+input[type="range"] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* THUMB */
+/* Special styling for WebKit/Blink */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 0;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: -4px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  border: 0;
+  height: 0;
+  width: 0;
+}
+
+/* only show thumb on hover */
+input[type="range"]:hover::-moz-range-thumb {
+  border: 0;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  border: 0;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* TRACK */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  background: #535353;
+  border-radius: 2px;
+}
+
+input[type="range"]:hover::-webkit-slider-runnable-track {
+  /* background: #1db954; */
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  background: #535353;
+  border-radius: 2px;
+}
+
+input[type="range"]::-moz-range-progress {
+  height: 4px;
+  background: #b3b3b3;
+  border-radius: 2px;
+}
+
+input[type="range"]:hover::-moz-range-progress {
+  background: #1db954;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 4px;
+  background: #535353;
+  border-radius: 2px;
+}
+
+input[type="range"]::-ms-fill-lower {
+  height: 4px;
+  background: #b3b3b3;
+  border-radius: 2px;
+}
+
+input[type="range"]:hover::-ms-fill-lower {
+  background: #1db954;
+}
+
+/* input[type="range"]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #367ebd;
+} */

@@ -26,6 +26,12 @@ body {
   font-family: "spotify-circular";
   letter-spacing: 0.015em;
   color: var(--light-grey);
+  line-height: 20px;
+}
+
+/* https://stackoverflow.com/a/42421490/4658957 */
+input {
+  min-width: 0;
 }
 
 button,
@@ -34,19 +40,14 @@ select,
 textarea {
   font-family: inherit;
   font-size: inherit;
+  color: inherit;
 }
 
-/* TODO: remove opacity for all buttons */
 button {
-  color: #fff;
-  /* opacity: 0.7; */
-  /* why do I need to keep the below? */
-  font-family: "spotify-circular";
+  /* color: #fff; */
   padding: 0;
-}
-
-button:hover {
-  /* opacity: 1; */
+  border: 0;
+  background: none;
 }
 
 a {
@@ -101,56 +102,7 @@ ol {
   grid-template-columns: auto 1fr;
   grid-template-areas:
     "nav-bar main-view buddy-feed"
-    "now-playing-bar now-playing-bar now-playing-bar";
-}
-
-.now-playing-bar {
-  background-color: var(--dark-grey);
-  grid-area: now-playing-bar;
-  display: flex;
-  padding: 0 16px;
-  height: 90px;
-  align-content: center;
-}
-
-.now-playing {
-  width: 30%;
-  display: flex;
-  align-items: center;
-}
-
-.now-playing a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.now-playing img {
-  width: 56px;
-  height: 56px;
-}
-
-.track-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 14px;
-}
-
-.track-name {
-  font-size: 14px;
-  color: #fff;
-}
-
-.artist-name {
-  font-size: 12px;
-}
-
-.player-controls {
-  width: 40%;
-}
-
-.extra-controls {
-  width: 30%;
+    "player player player";
 }
 
 .main-view {
