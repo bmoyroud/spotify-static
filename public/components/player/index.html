@@ -10,7 +10,7 @@
     <title>Spotify</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/player.css" />
-    <link rel="stylesheet" href="/stylesheets/range-input.css" />
+    <link rel="stylesheet" href="/stylesheets/progress-bar.css" />
   </head>
 
   <body>
@@ -124,11 +124,12 @@
             </div>
             <div class="player__playback-bar">
               <span class="player__playback-time">0:35</span>
-              <input
-                class="player__volume-slider"
-                type="range"
-                onchange="console.log(this.value);"
-              />
+              <div class="progress-bar player__volume-slider">
+                <div class="progress-bar__track">
+                  <div class="progress-bar__track-fg"></div>
+                </div>
+                <button class="progress-bar__thumb"></button>
+              </div>
               <span class="player__playback-time">3:09</span>
             </div>
           </div>
@@ -188,15 +189,29 @@
                   />
                 </svg>
               </button>
-              <input
-                class="player__volume-slider"
-                type="range"
-                onchange="console.log(this.value);"
-              />
+
+              <div class="progress-bar player__volume-slider">
+                <div class="progress-bar__track">
+                  <div class="progress-bar__track-fg"></div>
+                </div>
+                <button class="progress-bar__thumb"></button>
+              </div>
+
+              <div class="progress-bar">
+                <!-- 2 components: track and thumb -->
+                <div class="progress-bar__track">
+                  <!-- Track (foreground) -->
+                  <div class="progress-bar__track-fg"></div>
+                </div>
+                <!-- Thumb -->
+                <button class="progress-bar__thumb"></button>
+              </div>
             </div>
           </div>
         </footer>
       </div>
     </div>
+
+    <script src="/js/progress-bar.js"></script>
   </body>
 </html>

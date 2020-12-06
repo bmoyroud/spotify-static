@@ -1,15 +1,17 @@
 input[type="range"] {
+  --clr-fg: #b3b3b3;
+  --clr-fg-hover: #1db954;
+  --clr-bg: #535353;
+  --clr-thumb: #fff;
+
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   width: 100%; /* Specific width is required for Firefox. */
   background: transparent; /* Otherwise white in Chrome */
 }
 
 input[type="range"]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  outline: none;
 }
 
 input[type="range"]::-ms-track {
@@ -29,9 +31,106 @@ input[type="range"]::-webkit-slider-thumb {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background: #fff;
-  margin-top: -4px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); /* Add cool effects to your sliders! */
+  background: var(--clr-thumb);
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  margin-top: -4px;
+  /* Add cool effects to your sliders! */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 6px 0 0 -4px var(--clr-bg),
+    7px 0 0 -4px var(--clr-bg), 8px 0 0 -4px var(--clr-bg),
+    9px 0 0 -4px var(--clr-bg), 10px 0 0 -4px var(--clr-bg),
+    11px 0 0 -4px var(--clr-bg), 12px 0 0 -4px var(--clr-bg),
+    13px 0 0 -4px var(--clr-bg), 14px 0 0 -4px var(--clr-bg),
+    15px 0 0 -4px var(--clr-bg), 16px 0 0 -4px var(--clr-bg),
+    17px 0 0 -4px var(--clr-bg), 18px 0 0 -4px var(--clr-bg),
+    19px 0 0 -4px var(--clr-bg), 20px 0 0 -4px var(--clr-bg),
+    21px 0 0 -4px var(--clr-bg), 22px 0 0 -4px var(--clr-bg),
+    23px 0 0 -4px var(--clr-bg), 24px 0 0 -4px var(--clr-bg),
+    25px 0 0 -4px var(--clr-bg), 26px 0 0 -4px var(--clr-bg),
+    27px 0 0 -4px var(--clr-bg), 28px 0 0 -4px var(--clr-bg),
+    29px 0 0 -4px var(--clr-bg), 30px 0 0 -4px var(--clr-bg),
+    31px 0 0 -4px var(--clr-bg), 32px 0 0 -4px var(--clr-bg),
+    33px 0 0 -4px var(--clr-bg), 34px 0 0 -4px var(--clr-bg),
+    35px 0 0 -4px var(--clr-bg), 36px 0 0 -4px var(--clr-bg),
+    37px 0 0 -4px var(--clr-bg), 38px 0 0 -4px var(--clr-bg),
+    39px 0 0 -4px var(--clr-bg), 40px 0 0 -4px var(--clr-bg),
+    41px 0 0 -4px var(--clr-bg), 42px 0 0 -4px var(--clr-bg),
+    43px 0 0 -4px var(--clr-bg), 44px 0 0 -4px var(--clr-bg),
+    45px 0 0 -4px var(--clr-bg), 46px 0 0 -4px var(--clr-bg),
+    47px 0 0 -4px var(--clr-bg), 48px 0 0 -4px var(--clr-bg),
+    49px 0 0 -4px var(--clr-bg), 50px 0 0 -4px var(--clr-bg),
+    51px 0 0 -4px var(--clr-bg), 52px 0 0 -4px var(--clr-bg),
+    53px 0 0 -4px var(--clr-bg), 54px 0 0 -4px var(--clr-bg),
+    55px 0 0 -4px var(--clr-bg), 56px 0 0 -4px var(--clr-bg),
+    57px 0 0 -4px var(--clr-bg), 58px 0 0 -4px var(--clr-bg),
+    59px 0 0 -4px var(--clr-bg), 60px 0 0 -4px var(--clr-bg),
+    61px 0 0 -4px var(--clr-bg), 62px 0 0 -4px var(--clr-bg),
+    63px 0 0 -4px var(--clr-bg), 64px 0 0 -4px var(--clr-bg),
+    65px 0 0 -4px var(--clr-bg), 66px 0 0 -4px var(--clr-bg),
+    67px 0 0 -4px var(--clr-bg), 68px 0 0 -4px var(--clr-bg),
+    69px 0 0 -4px var(--clr-bg), 70px 0 0 -4px var(--clr-bg),
+    71px 0 0 -4px var(--clr-bg), 72px 0 0 -4px var(--clr-bg),
+    73px 0 0 -4px var(--clr-bg), 74px 0 0 -4px var(--clr-bg),
+    75px 0 0 -4px var(--clr-bg), 76px 0 0 -4px var(--clr-bg),
+    77px 0 0 -4px var(--clr-bg), 78px 0 0 -4px var(--clr-bg),
+    79px 0 0 -4px var(--clr-bg), 80px 0 0 -4px var(--clr-bg),
+    81px 0 0 -4px var(--clr-bg), 82px 0 0 -4px var(--clr-bg),
+    83px 0 0 -4px var(--clr-bg), 84px 0 0 -4px var(--clr-bg),
+    85px 0 0 -4px var(--clr-bg), 86px 0 0 -4px var(--clr-bg),
+    87px 0 0 -4px var(--clr-bg), 88px 0 0 -4px var(--clr-bg),
+    89px 0 0 -4px var(--clr-bg), 90px 0 0 -4px var(--clr-bg),
+    91px 0 0 -4px var(--clr-bg), 92px 0 0 -4px var(--clr-bg),
+    93px 0 0 -4px var(--clr-bg), 94px 0 0 -4px var(--clr-bg),
+    95px 0 0 -4px var(--clr-bg), 96px 0 0 -4px var(--clr-bg),
+    97px 0 0 -4px var(--clr-bg), 98px 0 0 -4px var(--clr-bg),
+    99px 0 0 -4px var(--clr-bg), 100px 0 0 -4px var(--clr-bg),
+    101px 0 0 -4px var(--clr-bg), 102px 0 0 -4px var(--clr-bg),
+    103px 0 0 -4px var(--clr-bg), 104px 0 0 -4px var(--clr-bg),
+    105px 0 0 -4px var(--clr-bg), 106px 0 0 -4px var(--clr-bg),
+    107px 0 0 -4px var(--clr-bg), 108px 0 0 -4px var(--clr-bg),
+    109px 0 0 -4px var(--clr-bg), 110px 0 0 -4px var(--clr-bg),
+    111px 0 0 -4px var(--clr-bg), 112px 0 0 -4px var(--clr-bg),
+    113px 0 0 -4px var(--clr-bg), 114px 0 0 -4px var(--clr-bg),
+    115px 0 0 -4px var(--clr-bg), 116px 0 0 -4px var(--clr-bg),
+    117px 0 0 -4px var(--clr-bg), 118px 0 0 -4px var(--clr-bg),
+    119px 0 0 -4px var(--clr-bg), 120px 0 0 -4px var(--clr-bg),
+    121px 0 0 -4px var(--clr-bg), 122px 0 0 -4px var(--clr-bg),
+    123px 0 0 -4px var(--clr-bg), 124px 0 0 -4px var(--clr-bg),
+    125px 0 0 -4px var(--clr-bg), 126px 0 0 -4px var(--clr-bg),
+    127px 0 0 -4px var(--clr-bg), 128px 0 0 -4px var(--clr-bg),
+    129px 0 0 -4px var(--clr-bg), 130px 0 0 -4px var(--clr-bg),
+    131px 0 0 -4px var(--clr-bg), 132px 0 0 -4px var(--clr-bg),
+    133px 0 0 -4px var(--clr-bg), 134px 0 0 -4px var(--clr-bg),
+    135px 0 0 -4px var(--clr-bg), 136px 0 0 -4px var(--clr-bg),
+    137px 0 0 -4px var(--clr-bg), 138px 0 0 -4px var(--clr-bg),
+    139px 0 0 -4px var(--clr-bg), 140px 0 0 -4px var(--clr-bg),
+    141px 0 0 -4px var(--clr-bg), 142px 0 0 -4px var(--clr-bg),
+    143px 0 0 -4px var(--clr-bg), 144px 0 0 -4px var(--clr-bg),
+    145px 0 0 -4px var(--clr-bg), 146px 0 0 -4px var(--clr-bg),
+    147px 0 0 -4px var(--clr-bg), 148px 0 0 -4px var(--clr-bg),
+    149px 0 0 -4px var(--clr-bg), 150px 0 0 -4px var(--clr-bg),
+    151px 0 0 -4px var(--clr-bg), 152px 0 0 -4px var(--clr-bg),
+    153px 0 0 -4px var(--clr-bg), 154px 0 0 -4px var(--clr-bg),
+    155px 0 0 -4px var(--clr-bg), 156px 0 0 -4px var(--clr-bg),
+    157px 0 0 -4px var(--clr-bg), 158px 0 0 -4px var(--clr-bg),
+    159px 0 0 -4px var(--clr-bg), 160px 0 0 -4px var(--clr-bg),
+    161px 0 0 -4px var(--clr-bg), 162px 0 0 -4px var(--clr-bg),
+    163px 0 0 -4px var(--clr-bg), 164px 0 0 -4px var(--clr-bg),
+    165px 0 0 -4px var(--clr-bg), 166px 0 0 -4px var(--clr-bg),
+    167px 0 0 -4px var(--clr-bg), 168px 0 0 -4px var(--clr-bg),
+    169px 0 0 -4px var(--clr-bg), 170px 0 0 -4px var(--clr-bg),
+    171px 0 0 -4px var(--clr-bg), 172px 0 0 -4px var(--clr-bg),
+    173px 0 0 -4px var(--clr-bg), 174px 0 0 -4px var(--clr-bg),
+    175px 0 0 -4px var(--clr-bg), 176px 0 0 -4px var(--clr-bg),
+    177px 0 0 -4px var(--clr-bg), 178px 0 0 -4px var(--clr-bg),
+    179px 0 0 -4px var(--clr-bg), 180px 0 0 -4px var(--clr-bg),
+    181px 0 0 -4px var(--clr-bg), 182px 0 0 -4px var(--clr-bg),
+    183px 0 0 -4px var(--clr-bg), 184px 0 0 -4px var(--clr-bg),
+    185px 0 0 -4px var(--clr-bg), 186px 0 0 -4px var(--clr-bg),
+    187px 0 0 -4px var(--clr-bg), 188px 0 0 -4px var(--clr-bg),
+    189px 0 0 -4px var(--clr-bg), 190px 0 0 -4px var(--clr-bg),
+    191px 0 0 -4px var(--clr-bg), 192px 0 0 -4px var(--clr-bg),
+    193px 0 0 -4px var(--clr-bg), 194px 0 0 -4px var(--clr-bg),
+    195px 0 0 -4px var(--clr-bg);
 }
 
 /* All the same stuff for Firefox */
@@ -47,17 +146,23 @@ input[type="range"]:hover::-moz-range-thumb {
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--clr-thumb);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 /* All the same stuff for IE */
 input[type="range"]::-ms-thumb {
   border: 0;
+  height: 0;
+  width: 0;
+}
+
+input[type="range"]:hover::-ms-thumb {
+  border: 0;
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--clr-thumb);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -65,46 +170,46 @@ input[type="range"]::-ms-thumb {
 input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
-  background: #535353;
+  background: var(--clr-fg);
   border-radius: 2px;
 }
 
 input[type="range"]:hover::-webkit-slider-runnable-track {
-  /* background: #1db954; */
+  background: var(--clr-fg-hover);
 }
 
 input[type="range"]::-moz-range-track {
   width: 100%;
   height: 4px;
-  background: #535353;
+  background: var(--clr-bg);
   border-radius: 2px;
 }
 
 input[type="range"]::-moz-range-progress {
   height: 4px;
-  background: #b3b3b3;
+  background: var(--clr-fg);
   border-radius: 2px;
 }
 
 input[type="range"]:hover::-moz-range-progress {
-  background: #1db954;
+  background: var(--clr-fg-hover);
 }
 
 input[type="range"]::-ms-track {
   width: 100%;
   height: 4px;
-  background: #535353;
+  background: var(--clr-bg);
   border-radius: 2px;
 }
 
 input[type="range"]::-ms-fill-lower {
   height: 4px;
-  background: #b3b3b3;
+  background: var(--clr-fg);
   border-radius: 2px;
 }
 
 input[type="range"]:hover::-ms-fill-lower {
-  background: #1db954;
+  background: var(--clr-fg-hover);
 }
 
 /* input[type="range"]::-ms-fill-upper {

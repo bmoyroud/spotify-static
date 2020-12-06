@@ -119,6 +119,7 @@
 .player__playback-bar {
   width: 100%;
   display: flex;
+  align-items: center;
 }
 
 .player__playback-time {
@@ -134,62 +135,15 @@
 
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .player__volume {
   width: 125px;
   display: flex;
+  align-items: center;
 }
 
 .player__volume-slider {
   flex: 1;
 }
-
-/* 
-.now-playing-bar {
-  background-color: var(--dark-grey);
-  display: flex;
-  padding: 0 16px;
-  align-content: center;
-}
-
-.now-playing {
-  width: 30%;
-  display: flex;
-  align-items: center;
-}
-
-.now-playing a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.now-playing img {
-  width: 56px;
-  height: 56px;
-}
-
-.track-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 14px;
-}
-
-.track-name {
-  font-size: 14px;
-  color: #fff;
-}
-
-.artist-name {
-  font-size: 12px;
-}
-
-.player-controls {
-  width: 40%;
-}
-
-.extra-controls {
-  width: 30%;
-} */

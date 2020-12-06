@@ -1,0 +1,63 @@
+.progress-bar {
+  --clr-fg: #b3b3b3;
+  --clr-fg-hover: #1db954;
+  --clr-bg: #535353;
+  --clr-thumb: #fff;
+
+  --progress: 50%;
+
+  /* 12px to accomodate slider */
+  height: 12px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar__track {
+  flex: 1;
+  height: 4px;
+  background-color: var(--clr-bg);
+  border-radius: 2px;
+}
+
+.progress-bar__track-fg {
+  background-color: var(--clr-fg);
+  height: 100%;
+  border-radius: 2px;
+  width: var(--progress);
+}
+
+.progress-bar__thumb {
+  /* hidden by default */
+  display: none;
+  position: absolute;
+  top: 0;
+  /* 6px is half of button width */
+  left: calc(var(--progress) - 6px);
+
+  border: 0;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: var(--clr-thumb);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* on hover, change fg color & show thumb */
+.progress-bar:hover .progress-bar__track-fg {
+  background-color: var(--clr-fg-hover);
+}
+
+.progress-bar:hover .progress-bar__thumb {
+  display: block;
+}
+
+/* same as hover */
+.progress-bar--active .progress-bar__track-fg {
+  background-color: var(--clr-fg-hover);
+}
+
+.progress-bar--active .progress-bar__thumb {
+  display: block;
+}
