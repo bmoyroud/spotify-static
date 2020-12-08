@@ -114,3 +114,42 @@
   color: #fff;
   display: flex;
 }
+
+/* Focus */
+.track:focus {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  color: #fff;
+}
+
+.track:focus .track__link {
+  color: #fff;
+}
+
+.track:focus .track__disc-number {
+  display: none;
+}
+
+.track:focus .track__btn {
+  visibility: visible;
+  display: flex;
+  align-items: center;
+}
+
+/* Other tracks */
+.track__title--small {
+  flex: 4;
+  position: relative;
+}
+
+.track__album--small {
+  flex: 2;
+}
+
+.track__btn--search-page {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  justify-content: center;
+}
