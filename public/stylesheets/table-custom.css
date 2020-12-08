@@ -1,0 +1,116 @@
+.track {
+  padding: 8px 16px;
+  border-radius: 4px;
+  /* border: 1px solid blue; */
+
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.track__number {
+  /* background-color: red; */
+  width: 16px;
+  text-align: center;
+
+  /* position: relative; */
+}
+
+.track__btn {
+  color: #fff;
+  visibility: hidden;
+}
+
+.track__btn--play {
+  display: none;
+}
+
+.track__btn--like {
+  color: #b3b3b3;
+}
+
+.track__title {
+  /* background-color: blue; */
+  flex: 6;
+
+  display: flex;
+}
+
+.track__cover {
+  margin-right: 16px;
+}
+
+.track__name {
+  font-size: 16px;
+  color: #fff;
+}
+
+.track__artists {
+  display: flex;
+}
+
+.track__artist {
+  /* this allows pseudo element ',' to be of right color */
+  color: #b3b3b3;
+  display: inline-flex;
+}
+
+.track__artist:not(:last-child)::after {
+  content: ", ";
+  white-space: pre;
+}
+
+.track__album {
+  /* background-color: darkred; */
+  flex: 4;
+}
+
+.track__date-added {
+  /* background-color: green; */
+  flex: 3;
+}
+
+.track__duration {
+  /* background-color: purple; */
+  flex-basis: 120px;
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.track__link {
+  color: #b3b3b3;
+}
+
+/* Hover */
+.track:hover {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  color: #fff;
+}
+
+.track:hover .track__link {
+  color: #fff;
+}
+
+.track:hover .track__disc-number {
+  display: none;
+}
+
+.track:hover .track__btn {
+  visibility: visible;
+  display: flex;
+  align-items: center;
+}
+
+.track__link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.track__btn:hover {
+  color: #fff;
+  display: flex;
+}
