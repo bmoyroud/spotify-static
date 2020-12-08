@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/button.css" />
     <link rel="stylesheet" href="/stylesheets/top-bar.css" />
+    <link rel="stylesheet" href="/stylesheets/header.css" />
   </head>
 
   <body>
@@ -21,7 +22,7 @@
             <!-- Top bar backgrounds -->
             <div
               class="top-bar__background"
-              style="background-color: rgb(18, 18, 18);"
+              style="background-color: rgb(24, 40, 80);"
             ></div>
             <div
               class="top-bar__background"
@@ -61,7 +62,7 @@
                   ></polygon>
                 </svg>
               </button>
-              <h2 class="top-bar__title">Liked Songs</h2>
+              <h2 class="top-bar__title">The CSS Podcast</h2>
             </div>
 
             <!-- Top bar menu (right) -->
@@ -111,20 +112,57 @@
             </div>
           </header>
 
-          <!-- Content -->
-          <div
-            style="
-              height: 1000px;
-              border: solid 1px blue;
-              position: relative;
-              top: -60px;
-            "
-          >
+          <section class="header">
+            <!-- Backgrounds -->
             <div
-              id="header__sentinel"
-              class="header__sentinel"
-              style="height: 60px; border: solid 1px red;"
+              class="header__background"
+              style="background-color: rgb(24, 40, 80);"
             ></div>
+            <div class="header__background header__background--gradient"></div>
+            <!-- End backgrounds -->
+
+            <div class="header__content">
+              <div class="header__img-wrapper header__img-wrapper--rounded">
+                <img
+                  class="header__img header__img--rounded"
+                  src="https://i.scdn.co/image/96bbaea02cedc5148608196a93a0f547bc4d4778"
+                  alt=""
+                />
+              </div>
+              <div class="header__details">
+                <h2 class="header__type">Podcast</h2>
+                <h1 id="header__sentinel" class="header__title">
+                  The CSS Podcast
+                </h1>
+                <div class="header__additional-info">
+                  <h2>Google</h2>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Content -->
+          <div style="height: 1000px; position: relative; top: -60px;">
+            <div
+              class="content__background"
+              style="
+                height: 232px;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), #121212);
+                position: absolute;
+                top: 0;
+                width: 100%;
+
+                background-color: rgb(24, 40, 80);
+              "
+            ></div>
+
+            <!-- Actual content -->
+            <div>
+              <h1>Content comes now</h1>
+              <p>Content comes now</p>
+              <p>Content comes now</p>
+              <p>Content comes now</p>
+            </div>
           </div>
         </main>
       </div>

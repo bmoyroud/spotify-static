@@ -1,0 +1,49 @@
+.table-heading {
+  position: sticky;
+  top: 0;
+
+  height: 36px;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  margin-bottom: 16px;
+}
+
+.table-heading--sticky {
+  background-color: #181818;
+}
+
+.table-heading > span {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.table-heading__number {
+  width: 16px;
+  text-align: end;
+}
+
+.table-heading__title {
+  flex: 6;
+}
+
+.table-heading__album {
+  flex: 4;
+}
+
+.table-heading__date-added {
+  flex: 3;
+}
+
+.table-heading__duration {
+  flex-basis: 120px;
+  flex-grow: 1;
+
+  padding-right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
