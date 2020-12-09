@@ -1,4 +1,9 @@
 .button {
+  /* TODO: should the below be here or only in button--round */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24px;
 }
 
 .button--round {
@@ -10,6 +15,14 @@
   transform: scale(1.06);
 }
 
+.button--grey {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.button--grey:hover {
+  color: hsla(0, 0%, 100%, 1);
+}
+
 .button--green {
   color: #fff;
   background-color: #1db954;
@@ -18,4 +31,34 @@
 .button--small {
   height: 40px;
   width: 40px;
+}
+
+.button--big {
+  height: 56px;
+  width: 56px;
+  margin-right: 32px;
+}
+
+.button-like--empty {
+  color: #fff;
+}
+
+.button-like--filled {
+  color: #1db954;
+}
+
+.button-follow {
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+  border-radius: 4px;
+  padding: 7px 15px;
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.button-follow:hover {
+  border-color: #fff;
 }
