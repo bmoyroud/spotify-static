@@ -9,6 +9,10 @@
 
     <title>Spotify</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/nav.css" />
+    <link rel="stylesheet" href="/stylesheets/player.css" />
+    <link rel="stylesheet" href="/stylesheets/progress-bar.css" />
+    <link rel="stylesheet" href="/stylesheets/top-bar.css" />
     <link rel="stylesheet" href="/stylesheets/card-grid.css" />
     <link rel="stylesheet" href="/stylesheets/genres.css" />
   </head>
@@ -17,8 +21,9 @@
     <div id="root">
       <div class="container">
         <nav class="nav-bar">
-          <a class="logo" href="/">
-            <svg viewBox="0 0 1134 340" class="spotify-logo--text">
+          <!-- Spotify Logo -->
+          <a class="nav-bar__logo-wrapper" href="/">
+            <svg class="nav-bar__logo" viewBox="0 0 1134 340">
               <title>Spotify - Web Player</title>
               <path
                 d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z"
@@ -26,172 +31,273 @@
               ></path>
             </svg>
           </a>
-          <ul>
+
+          <!-- Navigation section -->
+          <ul class="nav-bar__items">
             <li>
-              <a href="/" class="heading nav-selected">
+              <a class="nav-bar__link" href="/home">
                 <svg
-                  class="icon"
+                  class="nav-bar__link-icon"
                   viewBox="0 0 512 512"
                   width="24"
                   height="24"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                    d="M 256.274 60.84 L 84.324 166.237 L 84.324 443.063 L 193.27 443.063 L 193.27 293.73 L 320.228 293.73 L 320.228 443.063 L 428.222 443.063 L 428.222 165.476 L 256.274 60.84 Z M 256.274 35.95 L 448.452 149.145 L 448.452 464.395 L 300 464.395 L 300 315.062 L 213.499 315.062 L 213.499 464.395 L 64.095 464.395 L 64.095 150.161 L 256.274 35.95 Z"
                     fill="currentColor"
                   ></path>
                 </svg>
-                <span>Home</span>
+                <span class="bold">Home</span>
               </a>
             </li>
             <li>
-              <a href="/search.html" class="heading">
+              <a class="nav-bar__link nav-bar__link--active" href="/search">
                 <svg
-                  class="icon"
+                  class="nav-bar__link-icon"
                   viewBox="0 0 512 512"
                   width="24"
                   height="24"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
                     fill="currentColor"
-                    fill-rule="evenodd"
+                  ></path>
+                  <path
+                    d="M357.079 341.334l94.476 110.73-32.508 27.683-94.222-110.476q-45.714 30.476-100.826 30.476-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 23.365-5.841 45.714t-16.635 41.651-25.778 35.555zM224 357.079q28.19 0 53.841-11.048t44.19-29.587 29.587-44.19 11.048-53.841-11.048-53.841-29.587-44.191-44.19-29.587-53.841-11.047-53.841 11.047-44.191 29.588-29.587 44.19-11.047 53.841 11.047 53.841 29.588 44.19 44.19 29.587 53.841 11.048z"
+                    fill="currentColor"
                   ></path>
                 </svg>
-                <span>Search</span>
+                <span class="bold">Search</span>
               </a>
             </li>
             <li>
-              <a href="/collection/playlists.html" class="heading">
+              <a class="nav-bar__link" href="/collection">
                 <svg
-                  class="icon"
+                  class="nav-bar__link-icon"
                   viewBox="0 0 512 512"
                   width="24"
                   height="24"
-                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
                     fill="currentColor"
                   ></path>
                 </svg>
-                <span>Your Library</span>
+                <span class="bold">Your Library</span>
               </a>
             </li>
           </ul>
-          <div class="nav-bar-playlists">
-            <h1>Playlists</h1>
-            <button class="create-playlist-button">
-              <svg
-                class="create-playlist-svg"
-                shape-rendering="crispEdges"
-                viewBox="0 0 36 36"
+
+          <!-- Playlist section -->
+          <div class="nav-bar__playlists">
+            <h1 class="nav-bar__playlists-title">Playlists</h1>
+
+            <!-- Create Playlist link -->
+            <a class="nav-bar__playlists-link" href="/">
+              <div
+                class="nav-bar__playlists-icon-wrapper"
+                style="background: #fff;"
               >
-                <path d="m28 20h-8v8h-4v-8h-8v-4h8v-8h4v8h8v4z"></path>
-              </svg>
-              <span class="heading">Create Playlist</span>
-            </button>
-            <button class="liked-songs-button">
-              <span class="heading">Liked Songs</span>
-            </button>
-            <hr />
-            <ul>
+                <svg shape-rendering="crispEdges" viewBox="0 0 36 36">
+                  <path d="m28 20h-8v8h-4v-8h-8v-4h8v-8h4v8h8v4z"></path>
+                </svg>
+              </div>
+              <span class="bold">Create Playlist</span>
+            </a>
+
+            <!-- Liked Songs link -->
+            <a class="nav-bar__playlists-link" href="/collection/tracks">
+              <div
+                class="nav-bar__playlists-icon-wrapper"
+                style="background: linear-gradient(135deg, #450af5, #c4efd9);"
+              >
+                <svg height="16" width="16" viewBox="0 0 16 16">
+                  <path fill="none" d="M0 0h16v16H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
+                  ></path>
+                </svg>
+              </div>
+              <span class="bold">Liked Songs</span>
+            </a>
+
+            <hr class="nav-bar__separator" />
+
+            <ul class="nav-bar__user-playlists">
               <li>
-                <a href="/playlist/1" class="heading-normal">
+                <a href="/playlist/1" class="nav-bar__user-playlist">
                   <span>Fitness</span>
                 </a>
               </li>
               <li>
-                <a href="/playlist/2" class="heading-normal">
+                <a href="/playlist/2" class="nav-bar__user-playlist">
                   <span>Release Radar</span>
                 </a>
               </li>
               <li>
-                <a href="/playlist/3" class="heading-normal">
+                <a href="/playlist/3" class="nav-bar__user-playlist">
                   <span>Discover Weekly</span>
                 </a>
               </li>
               <li>
-                <a href="/playlist/4" class="heading-normal">
+                <a href="/playlist/4" class="nav-bar__user-playlist">
                   <span>New Music Friday France</span>
                 </a>
               </li>
               <li>
-                <a href="/playlist/5" class="heading-normal">
+                <a href="/playlist/5" class="nav-bar__user-playlist">
                   <span>Your Top Songs 2018</span>
                 </a>
               </li>
               <li>
-                <a href="/playlist/6" class="heading-normal">
+                <a href="/playlist/6" class="nav-bar__user-playlist">
                   <span>My Shazam Tracks</span>
                 </a>
               </li>
               <li>
-                <a href="/playlist/6" class="heading-normal">
+                <a href="/playlist/6" class="nav-bar__user-playlist">
                   <span>Night</span>
                 </a>
               </li>
             </ul>
           </div>
         </nav>
-        <div class="now-playing-bar">
-          <div class="now-playing">
-            <img
-              src="https://i.scdn.co/image/ab67616d00004851fdf2e993e10e67396b3bf759"
-              alt=""
-            />
-            <div class="track-details">
-              <span>
-                <a href="/album/1eleCBhP2R8TXEDquvybwC" class="track-name">
-                  Be Kind (with Halsey)
-                </a>
-              </span>
-              <span>
-                <a href="/artist/64KEffDW9EtZ1y2vBYgq8T" class="artist-name">
-                  Marshmello
-                </a>
-              </span>
-            </div>
-          </div>
-          <div class="player-controls"></div>
-          <div class="extra-controls"></div>
-        </div>
+
         <main class="main-view">
-          <div class="top-bar">
-            <button>
-              <svg height="24" width="24" viewBox="0 0 24 24">
-                <polyline
-                  points="16 4 7 12 16 20"
-                  fill="none"
-                  stroke="#fff"
-                ></polyline>
-              </svg>
-            </button>
-            <button>
-              <svg height="24" width="24" viewBox="0 0 24 24">
-                <polyline
-                  points="8 4 17 12 8 20"
-                  fill="none"
-                  stroke="#fff"
-                ></polyline>
-              </svg>
-            </button>
-          </div>
+          <header class="top-bar">
+            <!-- Top bar backgrounds -->
+            <div
+              class="top-bar__background"
+              style="background-color: rgb(18, 18, 18);"
+            ></div>
+            <div
+             class="top-bar__background"
+             style="background-color: rgba(0, 0, 0, 0.6);"
+           ></div>
+
+           <!-- Top bar buttons (left) -->
+           <button class="top-bar__button" title="Go back">
+             <svg height="24" width="24" viewBox="0 0 24 24">
+               <polyline
+                 points="16 4 7 12 16 20"
+                 fill="none"
+                 stroke="#fff"
+               ></polyline>
+             </svg>
+           </button>
+           <button class="top-bar__button" title="Go forward" disabled>
+             <svg height="24" width="24" viewBox="0 0 24 24">
+               <polyline
+                 points="8 4 17 12 8 20"
+                 fill="none"
+                 stroke="#fff"
+               ></polyline>
+             </svg>
+           </button>
+
+           <!-- Top bar content (middle) -->
+           <div class="top-bar__content">
+             <!-- Search bar -->
+             <div class="top-bar__search">
+               <svg
+                 class="top-bar__search-icon"
+                 height="24"
+                 width="24"
+                 viewBox="0 0 512 512"
+               >
+                 <path
+                   d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                   fill="currentColor"
+                 ></path>
+               </svg>
+               <input
+                 class="top-bar__search-input"
+                 placeholder="Search for Artists, Songs, or Podcasts"
+                 required
+               />
+               <svg
+                 class="top-bar__search-cancel-icon"
+                 height="24"
+                 width="24"
+                 viewBox="0 0 24 24"
+               >
+                 <path
+                   d="M4.93,4.93,19.07,19.07m-14.14,0L19.07,4.93"
+                   stroke="currentColor"
+                 ></path>
+               </svg>
+             </div>
+
+             <!-- maxlength="80"
+             autocorrect="off"
+             autocapitalize="none"
+             spellcheck="false"-->
+           </div>
+
+           <!-- Top bar menu (right) -->
+           <div class="top-bar__menu">
+             <div class="top-bar__menu-button">
+               <div class="top-bar__avatar">
+                 <svg
+                   width="16"
+                   height="16"
+                   fill="currentColor"
+                   viewBox="0 0 18 20"
+                   xmlns="http://www.w3.org/2000/svg"
+                 >
+                   <path
+                     d="M15.216 13.717L12 11.869C11.823 11.768 11.772 11.607 11.757 11.521C11.742 11.435 11.737 11.267 11.869 11.111L13.18 9.57401C14.031 8.58001 14.5 7.31101 14.5 6.00001V5.50001C14.5 3.98501 13.866 2.52301 12.761 1.48601C11.64 0.435011 10.173 -0.0879888 8.636 0.0110112C5.756 0.198011 3.501 2.68401 3.501 5.67101V6.00001C3.501 7.31101 3.97 8.58001 4.82 9.57401L6.131 11.111C6.264 11.266 6.258 11.434 6.243 11.521C6.228 11.607 6.177 11.768 5.999 11.869L2.786 13.716C1.067 14.692 0 16.526 0 18.501V20H1V18.501C1 16.885 1.874 15.385 3.283 14.584L6.498 12.736C6.886 12.513 7.152 12.132 7.228 11.691C7.304 11.251 7.182 10.802 6.891 10.462L5.579 8.92501C4.883 8.11101 4.499 7.07201 4.499 6.00001V5.67101C4.499 3.21001 6.344 1.16201 8.699 1.00901C9.961 0.928011 11.159 1.35601 12.076 2.21501C12.994 3.07601 13.5 4.24301 13.5 5.50001V6.00001C13.5 7.07201 13.117 8.11101 12.42 8.92501L11.109 10.462C10.819 10.803 10.696 11.251 10.772 11.691C10.849 12.132 11.115 12.513 11.503 12.736L14.721 14.585C16.127 15.384 17.001 16.884 17.001 18.501V20H18.001V18.501C18 16.526 16.932 14.692 15.216 13.717Z"
+                   ></path>
+                 </svg>
+               </div>
+               <span class="top-bar__user">User id</span>
+               <svg height="16" width="16" viewBox="0 0 16 16">
+                 <path d="M3 6l5 5.794L13 6z" fill="#fff"></path>
+                 <!-- <path d="M13 10L8 4.206 3 10z" fill="#fff"></path> -->
+               </svg>
+             </div>
+             <!-- Hidden checkbox to toggle dropdown -->
+             <label
+               class="top-bar__menu-checkbox-label"
+               for="top-bar__menu-checkbox"
+             ></label>
+             <input
+               class="top-bar__menu-checkbox"
+               type="checkbox"
+               id="top-bar__menu-checkbox"
+             />
+             <ul class="top-bar__dropdown">
+               <li>
+                 <a class="top-bar__dropdown-item" href="/account">Account</a>
+               </li>
+               <li>
+                 <a class="top-bar__dropdown-item" href="/account">Profile</a>
+               </li>
+               <li>
+                 <div class="top-bar__dropdown-separator"></div>
+               </li>
+               <li><button class="top-bar__dropdown-item">Log out</button></li>
+             </ul>
+           </div>
+          </header>
+
+          <div id="sentinel" class="sentinel"></div>
+
           <div class="content">
             <!-- Top genres -->
             <div class="card-grid">
-              <div class="card-grid-header">
-                <div class="card-grid-titles">
-                  <h2 class="card-grid-title">Your top genres</h2>
+              <div class="card-grid__header">
+                <div class="card-grid__titles">
+                  <h2 class="card-grid__title">Your top genres</h2>
                 </div>
               </div>
-              <div class="card-grid-container top-genres">
+              <div class="card-grid__container top-genres">
                 <div class="genre" style="background-color: rgb(245, 155, 35);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Hip Hop</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Hip Hop</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/9676cef74ec147a48607c737c4f93943.jpeg"
                     />
                   </div>
@@ -201,10 +307,10 @@
                   class="genre"
                   style="background-color: rgb(195, 240, 200);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Pop</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Pop</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/d355f48a90b64c25b6e004179a596e51.jpeg"
                     />
                   </div>
@@ -214,20 +320,20 @@
                   class="genre"
                   style="background-color: rgb(155, 240, 225);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Dance / Electronic</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Dance / Electronic</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/3c419cbc46e5430795e056298c34702d.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(240, 55, 165);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">R&B</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">R&B</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/92a6fd8aaffe403ba1967c70097f90f9.jpeg"
                     />
                   </div>
@@ -237,17 +343,17 @@
 
             <!-- All genres -->
             <div class="card-grid">
-              <div class="card-grid-header">
-                <div class="card-grid-titles">
-                  <h2 class="card-grid-title">Browse all</h2>
+              <div class="card-grid__header">
+                <div class="card-grid__titles">
+                  <h2 class="card-grid__title">Browse all</h2>
                 </div>
               </div>
-              <div class="card-grid-container">
+              <div class="card-grid__container">
                 <div class="genre" style="background-color: rgb(245, 155, 35);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Podcasts</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Podcasts</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/ad4d5c268a214f78920517e76e6ed107.jpeg"
                     />
                   </div>
@@ -257,20 +363,20 @@
                   class="genre"
                   style="background-color: rgb(160, 195, 210);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Made For You</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Made For You</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/68433b0ee5b5465b8e926c42b84cbcdb.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(75, 145, 125);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Charts</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Charts</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/4b7472015a274eadbc00119f5141e548.jpeg"
                     />
                   </div>
@@ -280,10 +386,10 @@
                   class="genre"
                   style="background-color: rgb(160, 195, 210);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">New Releases</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">New Releases</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/acc7b5d7b1264d0593ec05c020d0a689.jpeg"
                     />
                   </div>
@@ -293,60 +399,60 @@
                   class="genre"
                   style="background-color: rgb(180, 155, 200);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Discover</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Discover</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/d0fb2ab104dc4846bdc56d72b0b0d785.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(255, 100, 55);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Concerts</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Concerts</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/60075fbc12304968941c7445a971fb9d.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(80, 155, 245);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">COVID-19 Guide</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">COVID-19 Guide</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://i.scdn.co/image/0e121a9a02c17d6703e7c12ba0c704166f9afac9"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(45, 70, 185);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">French Pop</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">French Pop</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/ab71e150e8ac4c179fdcef7267e5453b.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(80, 155, 245);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Mood</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Mood</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/baf681efc57145e180589e027496b101.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(235, 30, 50);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Rock</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Rock</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/31c85ae6fec34a16927ef28a7a88e97b.jpeg"
                     />
                   </div>
@@ -356,10 +462,10 @@
                   class="genre"
                   style="background-color: rgb(160, 195, 210);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Chill</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Chill</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/2470fe22d03a4375a9501dce8cfb2b8c.jpeg"
                     />
                   </div>
@@ -369,40 +475,40 @@
                   class="genre"
                   style="background-color: rgb(255, 200, 100);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Workout</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Workout</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/0093f59664854b619e34a51d39d35a2f.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(240, 55, 165);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Party</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Party</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/d6cf42772b014925b59ee2a247a9850a.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(255, 100, 55);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Latin</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Latin</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/1d7841c92c504343a391dfa0626fc22c.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(245, 155, 35);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">At Home</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">At Home</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/194b9d722de34cefb3b716c653b4526b.png"
                     />
                   </div>
@@ -412,10 +518,10 @@
                   class="genre"
                   style="background-color: rgb(160, 195, 210);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Sleep</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Sleep</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/6c53e335de834419a521e776668cca75.jpeg"
                     />
                   </div>
@@ -425,10 +531,10 @@
                   class="genre"
                   style="background-color: rgb(180, 155, 200);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Classical</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Classical</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/d7d44d00eb0542aeab69ed5c8654d104.jpeg"
                     />
                   </div>
@@ -438,19 +544,19 @@
                   class="genre"
                   style="background-color: rgb(180, 155, 200);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Decades</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Decades</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/5174463a68e449bf8ee0ae85cd6d7b48.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(83, 83, 83);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Student</h2>
-                    <img class="genre-img" />
+                  <div class="genre__content">
+                    <h2 class="genre__title">Student</h2>
+                    <img class="genre__img" />
                   </div>
                 </div>
 
@@ -458,10 +564,10 @@
                   class="genre"
                   style="background-color: rgb(160, 195, 210);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Jazz</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Jazz</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/0f2f4c71c9714cc5b757f7bb3559fcdb.jpeg"
                     />
                   </div>
@@ -471,40 +577,40 @@
                   class="genre"
                   style="background-color: rgb(195, 150, 135);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Afro</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Afro</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/ccd7ffa0f88246da8e7b0604e30249c7.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(240, 55, 165);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Soul</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Soul</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/aa6811c21031431b817f5f152e93701f.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(0, 100, 80);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Metal</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Metal</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/ffbc60a80ba64554ac09130827c43d06.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(0, 100, 80);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Reggae</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Reggae</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/46e47036f0ae4608a61c68b65750610f.jpeg"
                     />
                   </div>
@@ -514,40 +620,40 @@
                   class="genre"
                   style="background-color: rgb(245, 115, 160);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Romance</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Romance</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/f926c0d460ae4f1abd83ffc3c1affdf0.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(65, 0, 245);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Indie</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Indie</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/4100c80f8efb45a38eb26b42aef401fa.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(75, 145, 125);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Folk & Acoustic</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Folk & Acoustic</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/7d6832ae5da44e748888723f555a9cdc.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(140, 25, 50);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Happy Holidays</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Happy Holidays</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/8095bb75a61e4623906cb847ae87d9da.jpeg"
                     />
                   </div>
@@ -557,10 +663,10 @@
                   class="genre"
                   style="background-color: rgb(205, 245, 100);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">K-Pop</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">K-Pop</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/85ff3ff8f2c84706ab76f27fd0388c56.jpeg"
                     />
                   </div>
@@ -570,10 +676,10 @@
                   class="genre"
                   style="background-color: rgb(180, 155, 200);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Focus</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Focus</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/cf23ab0343e047daa88703e21c01a4aa.jpeg"
                     />
                   </div>
@@ -583,27 +689,27 @@
                   class="genre"
                   style="background-color: rgb(180, 155, 200);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Wellness</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Wellness</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/31580c92008a4722a7b3919c8d0388e8.png"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(83, 83, 83);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Alternative</h2>
-                    <img class="genre-img" />
+                  <div class="genre__content">
+                    <h2 class="genre__title">Alternative</h2>
+                    <img class="genre__img" />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(245, 155, 35);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Trending</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Trending</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/21a2ccde5f5c42b0858600a19153ce8d.jpeg"
                     />
                   </div>
@@ -613,10 +719,10 @@
                   class="genre"
                   style="background-color: rgb(155, 240, 225);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Gaming</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Gaming</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/9e364b88527c4314b6caa40e935f3624.png"
                     />
                   </div>
@@ -626,40 +732,40 @@
                   class="genre"
                   style="background-color: rgb(255, 200, 100);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Country</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Country</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/4afff64d33e74356905bc257646d476c.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(240, 55, 165);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Funk</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Funk</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/07b5a850818e4ec28b5ff37735f7716f.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(235, 30, 50);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Tastemakers</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Tastemakers</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/7ef1d6445a684e30bdd78f09507d688c.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(80, 155, 245);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Arab</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Arab</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/2ed683fbb31d4a3392a3a67c04c41774.jpeg"
                     />
                   </div>
@@ -669,10 +775,10 @@
                   class="genre"
                   style="background-color: rgb(160, 195, 210);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Blues</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Blues</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/a91f8b3da9da4ebcb12ee6ad8ac6d3c0.jpeg"
                     />
                   </div>
@@ -682,20 +788,20 @@
                   class="genre"
                   style="background-color: rgb(155, 240, 225);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">League Of Legends</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">League Of Legends</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://i.scdn.co/image/ab67706f000000025f0ff9251e3cfe641160dc31"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(175, 40, 150);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Kids & Family</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Kids & Family</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/f4393ac2106e4583ac86e2ddd7ae827d.jpeg"
                     />
                   </div>
@@ -705,10 +811,10 @@
                   class="genre"
                   style="background-color: rgb(255, 200, 100);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Brazilian music</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Brazilian music</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/f0dd678dd57645159dc42c106e93b9ca.jpeg"
                     />
                   </div>
@@ -718,10 +824,10 @@
                   class="genre"
                   style="background-color: rgb(160, 195, 210);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Instrumental</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Instrumental</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://i.scdn.co/image/ab67706f000000038ed1a5002b96c2ea882541b2"
                     />
                   </div>
@@ -731,19 +837,19 @@
                   class="genre"
                   style="background-color: rgb(255, 200, 100);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Travel</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Travel</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/296edba89b464025865781eee1b2a2a1.jpeg"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(83, 83, 83);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">RADAR</h2>
-                    <img class="genre-img" />
+                  <div class="genre__content">
+                    <h2 class="genre__title">RADAR</h2>
+                    <img class="genre__img" />
                   </div>
                 </div>
 
@@ -751,10 +857,10 @@
                   class="genre"
                   style="background-color: rgb(111, 111, 111);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Punk</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Punk</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/1383b2c0e0954accad7e7a05387c0c4e.jpeg"
                     />
                   </div>
@@ -764,19 +870,19 @@
                   class="genre"
                   style="background-color: rgb(160, 195, 210);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Higher Ground</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Higher Ground</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://i.scdn.co/image/4f26db8239305bef29ef956b331b31407cbf51f9"
                     />
                   </div>
                 </div>
 
                 <div class="genre" style="background-color: rgb(83, 83, 83);">
-                  <div class="genre-content">
-                    <h2 class="genre-title">Flamenco</h2>
-                    <img class="genre-img" />
+                  <div class="genre__content">
+                    <h2 class="genre__title">Flamenco</h2>
+                    <img class="genre__img" />
                   </div>
                 </div>
 
@@ -784,10 +890,10 @@
                   class="genre"
                   style="background-color: rgb(255, 200, 100);"
                 >
-                  <div class="genre-content">
-                    <h2 class="genre-title">Musique Indienne</h2>
+                  <div class="genre__content">
+                    <h2 class="genre__title">Musique Indienne</h2>
                     <img
-                      class="genre-img"
+                      class="genre__img"
                       src="https://t.scdn.co/images/ed1e3eedce7c499699eff62c55460ceb.jpeg"
                     />
                   </div>
@@ -796,7 +902,204 @@
             </div>
           </div>
         </main>
+
+        <footer class="player">
+          <!-- Track details (left) -->
+          <div class="player__track">
+            <img
+              class="player__cover"
+              src="https://i.scdn.co/image/ab67616d00004851b63abc19cc0b78c17030db5f"
+            />
+            <div class="player__details">
+              <a href="/album" class="player__title">Train Wreck - Acoustic</a>
+              <ul class="player__artists">
+                <li class="player__artist">
+                  <a class="player__artist-link" href="/artist">James Arthur</a>
+                </li>
+                <li class="player__artist">
+                  <a class="player__artist-link" href="/artist">Artist 2</a>
+                </li>
+              </ul>
+            </div>
+            <button class="player__like">
+              <svg height="16" width="16" viewBox="0 0 16 16">
+                <path fill="none" d="M0 0h16v16H0z"></path>
+                <path
+                  stroke="currentColor"
+                  d="M13.797 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253c-.77.77-1.194 1.794-1.194 2.883s.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195a4.052 4.052 0 001.195-2.883 4.057 4.057 0 00-1.196-2.883z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Track controls (center) -->
+          <div class="player__track-controls">
+            <div class="player__playback-controls">
+              <!-- Shuffle -->
+              <button class="player__playback-control" title="Enable shuffle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"
+                  />
+                </svg>
+              </button>
+
+              <!-- Previous  -->
+              <button class="player__playback-control" title="Previous">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M6 6h2v12H6V6zm3.5 6l8.5 6V6l-8.5 6z" />
+                </svg>
+              </button>
+
+              <!-- Play / Pause -->
+              <button class="player__playback-control" title="Play">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M8 5v14l11-7L8 5z" />
+                </svg>
+              </button>
+
+              <!-- Next -->
+              <button class="player__playback-control" title="Next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                </svg>
+              </button>
+
+              <!-- Repeat -->
+              <button class="player__playback-control" title="Enable repeat">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="16"
+                  height="16"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="player__playback-bar">
+              <span class="player__playback-time">0:35</span>
+              <div class="progress-bar player__volume-slider">
+                <div class="progress-bar__track">
+                  <div class="progress-bar__track-fg"></div>
+                </div>
+                <button class="progress-bar__thumb"></button>
+              </div>
+              <span class="player__playback-time">3:09</span>
+            </div>
+          </div>
+
+          <!-- Audio controls (right) -->
+          <div class="player__audio-controls">
+            <!-- Queue -->
+            <button class="player__playback-control" title="Queue">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="20"
+                height="20"
+              >
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path d="M4 10h12v2H4zm0-4h12v2H4zm0 8h8v2H4zm10 0v6l5-3z" />
+              </svg>
+            </button>
+
+            <!-- Devices -->
+            <button class="player__playback-control" title="Devices">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="16"
+                height="16"
+              >
+                <g>
+                  <rect fill="none" height="24" width="24" />
+                  <rect fill="none" height="24" width="24" />
+                  <rect fill="none" height="24" width="24" />
+                </g>
+                <g>
+                  <path
+                    d="M6,22h12l-6-6L6,22z M23,3H1v16h6v-2H3V5h18v12h-4v2h6V3z"
+                  />
+                </g>
+              </svg>
+            </button>
+
+            <!-- Volume -->
+            <div class="player__volume">
+              <button class="player__playback-control" title="Volume">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path
+                    d="M18.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5z"
+                  />
+                </svg>
+              </button>
+
+              <div class="progress-bar player__volume-slider">
+                <div class="progress-bar__track">
+                  <div class="progress-bar__track-fg"></div>
+                </div>
+                <button class="progress-bar__thumb"></button>
+              </div>
+
+              <div class="progress-bar">
+                <!-- 2 components: track and thumb -->
+                <div class="progress-bar__track">
+                  <!-- Track (foreground) -->
+                  <div class="progress-bar__track-fg"></div>
+                </div>
+                <!-- Thumb -->
+                <button class="progress-bar__thumb"></button>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
+
+    <script src="/js/progress-bar.js"></script>
+    <script src="/js/top-bar.js"></script>
   </body>
 </html>

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/stylesheets/nav.css" />
     <link rel="stylesheet" href="/stylesheets/player.css" />
     <link rel="stylesheet" href="/stylesheets/progress-bar.css" />
+    <link rel="stylesheet" href="/stylesheets/top-bar.css" />
   </head>
 
   <body>
@@ -157,7 +158,13 @@
           </div>
         </nav>
 
-        <main></main>
+        <main class="main-view">
+          <header class="top-bar"></header>
+
+          <div id="sentinel" class="sentinel"></div>
+
+          <div class="content"></div>
+        </main>
 
         <footer class="player">
           <!-- Track details (left) -->
