@@ -1,0 +1,10 @@
+.sentinel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+
+  height: 60px;
+  border: solid 3px red;
+}

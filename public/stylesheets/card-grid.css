@@ -8,6 +8,10 @@
   flex: 1;
 }
 
+.card-grid__title {
+  line-height: 28px;
+}
+
 .card-grid__title a:hover {
   text-decoration: underline;
 }

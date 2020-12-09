@@ -50,7 +50,7 @@ const observer = new IntersectionObserver((entries) => {
   }
 }, options);
 
-const target = document.querySelector("#header__sentinel");
+const target = document.getElementById("sentinel");
 console.log(target);
 
 observer.observe(target);
