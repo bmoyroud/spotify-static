@@ -33,6 +33,11 @@
   width: 40px;
 }
 
+.button--medium {
+  height: 48px;
+  width: 48px;
+}
+
 .button--big {
   height: 56px;
   width: 56px;

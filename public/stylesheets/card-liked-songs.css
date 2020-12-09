@@ -1,62 +1,71 @@
 .card-liked-songs {
   background: linear-gradient(149.46deg, #450af5, #8e8ee5 99.16%);
   grid-column: span 2;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  position: relative;
 }
 
-.card-liked-songs-list {
+.card-liked-songs__list {
   flex: 1;
+
   display: flex;
   align-items: center;
   font-size: 16px;
   color: #fff;
 }
 
-.card-liked-songs-list-song {
+.card-liked-songs__list > div {
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+}
+
+.card-liked-songs__list-artist {
+  font-size: 16px;
+}
+
+.card-liked-songs__list-song {
+  font-size: 16px;
   opacity: 0.7;
 }
 
-.card-liked-songs-list-song:not(:last-child)::after {
+.card-liked-songs__list-song:not(:last-child)::after {
   content: " •";
 }
 
-.card-liked-songs-details {
+.card-liked-songs__details {
   display: flex;
   align-items: flex-end;
 }
 
-.card-liked-songs-titles {
+.card-liked-songs__titles {
   flex: 1;
 }
 
-.card-liked-songs-title {
+.card-liked-songs__title {
   font-size: 32px;
+  line-height: 36px;
 }
 
-.card-liked-songs-subtitle {
+.card-liked-songs__subtitle {
   font-size: 16px;
+  line-height: 28px;
   color: #fff;
 }
 
-.card-liked-songs-button {
-  /* TODO: remove once buttons are fixed */
-  opacity: 1;
-
-  border: 0;
-  border-radius: 500px;
-  color: #fff;
-  background-color: #1db954;
-  height: 48px;
-  width: 48px;
-
-  /* position: absolute;
-  bottom: 8px;
-  right: 8px; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+.card-liked-songs__button-wrapper {
+  bottom: 20px;
+  right: 20px;
 }
 
-.card-liked-songs-button:hover {
-  transform: scale(1.06);
+/* TODO: remove when button class is redone */
+.card-liked-songs__button-wrapper > button {
+  margin: 0;
 }

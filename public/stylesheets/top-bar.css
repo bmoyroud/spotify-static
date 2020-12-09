@@ -131,6 +131,7 @@
 
 /* Tabs */
 .top-bar__tabs {
+  padding-left: 24px;
   display: flex;
 }
 
