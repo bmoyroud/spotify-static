@@ -45,10 +45,22 @@
   border-radius: 4px;
 }
 
+.nav-bar__link--active .nav-bar__link-icon > path:nth-child(1) {
+  display: inline;
+}
+
+.nav-bar__link--active .nav-bar__link-icon > path:nth-child(2) {
+  display: none;
+}
+
 .nav-bar__link-icon {
   width: 24px;
   height: 24px;
   margin-right: 16px;
+}
+
+.nav-bar__link-icon > path:nth-child(1) {
+  display: none;
 }
 
 /* Playlists section */
