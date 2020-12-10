@@ -1,5 +1,6 @@
 .action-bar {
-  padding: 24px 32px;
+  /* padding: 24px 32px; */
+  padding: 24px 0px;
 
   display: flex;
   align-items: center;

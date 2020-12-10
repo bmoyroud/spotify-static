@@ -1,12 +1,14 @@
 .top-bar {
   position: sticky;
-  height: 60px;
   /* if top: 0 is removed, top-bar does not stick */
   top: 0;
+
+  grid-area: main-view;
+  height: 60px;
   padding: 0 32px;
   display: flex;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* BACKGROUNDS */

@@ -1,6 +1,6 @@
 .table-heading {
   position: sticky;
-  top: 0;
+  top: 60px;
 
   height: 36px;
   padding: 0 16px;
@@ -14,6 +14,8 @@
 
 .table-heading--sticky {
   background-color: #181818;
+  margin: 0px -32px 16px -32px;
+  padding: 0px 48px;
 }
 
 .table-heading > span {
@@ -46,4 +48,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.table-heading__duration > svg {
+  margin-right: 32px;
 }
