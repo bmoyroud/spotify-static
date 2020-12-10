@@ -118,14 +118,25 @@ ol {
   height: 0;
 }
 
+.spacer {
+  position: sticky;
+  top: 0;
+  height: 60px;
+}
+
 .content {
   /* padding: 16px 32px; */
   /* padding: 0px 32px; */
   padding: 0px 32px 32px 32px;
 }
 
+/* TODO: where is this used? */
 .content .card-grid:not(:last-child) {
   margin-bottom: 32px;
+}
+
+.content--padding-top {
+  padding: 16px 32px 32px 32px;
 }
 
 .content--below-header {

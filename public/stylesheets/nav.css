@@ -91,6 +91,10 @@
   transition-timing-function: linear;
 }
 
+.nav-bar__playlists-link--active {
+  opacity: 1;
+}
+
 .nav-bar__playlists-link:hover {
   opacity: 1;
 }
