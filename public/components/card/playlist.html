@@ -10,19 +10,14 @@
     <title>Components - Playlist Card</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/utilities.css" />
-    <link rel="stylesheet" href="/stylesheets/card.css" />
+
     <link rel="stylesheet" href="/stylesheets/button.css" />
+    <link rel="stylesheet" href="/stylesheets/card.css" />
+    <link rel="stylesheet" href="/stylesheets/card-grid.css" />
   </head>
 
   <body>
-    <div
-      style="
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        grid-gap: 24px;
-      "
-    >
+    <div style="padding: 8px;" class="cg__container">
       <!-- Playlist Card -->
       <!-- Billie Eilish Radio -->
       <div class="card">
@@ -34,9 +29,7 @@
               src="https://seeded-session-images.scdn.co/v1/img/artist/6qqNVTkY8uBg9cP3Jd7DAH/en"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -46,8 +39,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Billie Eilish</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Billie Eilish</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>By Spotify</span>
           </div>
         </div>
@@ -64,9 +57,7 @@
               src="https://i.scdn.co/image/ab67706f0000000216249686cdd32dc3aea15203"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -76,8 +67,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Hip-Hop Anthems: Def Jam</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Hip-Hop Anthems: Def Jam</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span
               >An homage to the iconic label’s 1980s and ’90s roots featuring
               legends like Jay-Z, LL Cool J, Public Enemy, Slick Rick and The
@@ -98,9 +89,7 @@
               src="https://newjams-images.scdn.co/v3/release-radar/33dfeea9cd00ab46a94a078c27e7a2a48fc51645/en/default"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -110,8 +99,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Release Radar</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Release Radar</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span
               >Catch all the latest music from artists you follow, plus new
               singles picked for you. Updates every Friday.</span

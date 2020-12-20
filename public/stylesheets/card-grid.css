@@ -1,3 +1,7 @@
+.cg {
+  /* currently unused */
+}
+
 .cg__header {
   display: flex;
   align-items: flex-end;
@@ -8,19 +12,12 @@
   flex: 1;
 }
 
-.cg__title {
-  line-height: 28px;
-}
-
-.cg__title a:hover {
-  text-decoration: underline;
+.cg__subtitle {
+  margin-top: 4px;
 }
 
 .cg__see-all {
-  font-size: 12px;
-  font-weight: 700;
   color: var(--light-grey);
-  text-transform: uppercase;
 }
 
 .cg__see-all:hover {

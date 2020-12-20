@@ -8,25 +8,17 @@
     />
 
     <title>Components - Cards</title>
-    <link rel="stylesheet" href="/stylesheets/fonts.css" />
-    <link rel="stylesheet" href="/stylesheets/reset.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/utilities.css" />
 
-    <link rel="stylesheet" href="/stylesheets/card.css" />
     <link rel="stylesheet" href="/stylesheets/button.css" />
+    <link rel="stylesheet" href="/stylesheets/card.css" />
+    <link rel="stylesheet" href="/stylesheets/card-grid.css" />
   </head>
 
   <body>
     <!-- Playlist cards -->
-    <div
-      style="
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        grid-gap: 24px;
-      "
-    >
+    <div style="padding: 8px;" class="cg__container">
       <!-- Playlist Card -->
       <!-- Billie Eilish Radio -->
       <div class="card">
@@ -38,9 +30,7 @@
               src="https://seeded-session-images.scdn.co/v1/img/artist/6qqNVTkY8uBg9cP3Jd7DAH/en"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -50,8 +40,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Billie Eilish</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Billie Eilish</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>By Spotify</span>
           </div>
         </div>
@@ -68,9 +58,7 @@
               src="https://i.scdn.co/image/ab67706f0000000216249686cdd32dc3aea15203"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -80,8 +68,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Hip-Hop Anthems: Def Jam</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Hip-Hop Anthems: Def Jam</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span
               >An homage to the iconic label’s 1980s and ’90s roots featuring
               legends like Jay-Z, LL Cool J, Public Enemy, Slick Rick and The
@@ -102,9 +90,7 @@
               src="https://newjams-images.scdn.co/v3/release-radar/33dfeea9cd00ab46a94a078c27e7a2a48fc51645/en/default"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -114,8 +100,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Release Radar</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Release Radar</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span
               >Catch all the latest music from artists you follow, plus new
               singles picked for you. Updates every Friday.</span
@@ -127,14 +113,7 @@
     </div>
 
     <!-- Album cards -->
-    <div
-      style="
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        grid-gap: 24px;
-      "
-    >
+    <div style="padding: 8px;" class="cg__container">
       <!-- Album Card -->
       <!-- In A Tidal Wave Of Mystery (Deluxe) - Capital Cities -->
       <div class="card">
@@ -146,9 +125,7 @@
               src="https://i.scdn.co/image/ab67616d0000b27386266e425c9b784f645b4bd3"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -158,8 +135,10 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">In A Tidal Wave Of Mystery (Deluxe)</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">
+            In A Tidal Wave Of Mystery (Deluxe)
+          </h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>Capital Cities</span>
           </div>
         </div>
@@ -176,9 +155,7 @@
               src="https://i.scdn.co/image/ab67616d0000b2739ac5acc402ac5dccdfefa827"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -188,8 +165,10 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Falco III</h3>
-          <div class="card__subtitle"><span>1985</span><span>Album</span></div>
+          <h3 class="card__title title1 lc-1">Falco III</h3>
+          <div class="card__subtitle subtitle1 lc-2">
+            <span>1985</span><span>Album</span>
+          </div>
         </div>
       </div>
       <!-- End Falco III - Falco -->
@@ -204,9 +183,7 @@
               src="https://i.scdn.co/image/ab67616d0000b273c820f033bd82bef4355d1563"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -216,8 +193,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Shawn Mendes (Deluxe)</h3>
-          <div class="card__subtitle"><span>2019</span></div>
+          <h3 class="card__title title1 lc-1">Shawn Mendes (Deluxe)</h3>
+          <div class="card__subtitle subtitle1 lc-2"><span>2019</span></div>
         </div>
       </div>
       <!-- End Shawn Mendes (Deluxe) - Shawn Mendes -->
@@ -233,9 +210,7 @@
               src="https://i.scdn.co/image/ab67616d0000b2737047ba8d605041791305b38b"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -245,12 +220,14 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Minefields</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Minefields</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <a href="/artist" class="card__subtitle-link"
               ><span>Faouzia</span></a
             >,
-            <a href="/artist" class="card__subtitle-link">John Legend</a>
+            <a href="/artist" class="card__subtitle-link"
+              ><span>John Legend</span></a
+            >
           </div>
         </div>
       </div>
@@ -258,14 +235,7 @@
     </div>
 
     <!-- Podcast card -->
-    <div
-      style="
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        grid-gap: 24px;
-      "
-    >
+    <div style="padding: 8px;" class="cg__container">
       <!-- Podcast Card -->
       <!-- The Missing Cryptoqueen - BBC Radio -->
       <div class="card">
@@ -277,9 +247,7 @@
               src="https://i.scdn.co/image/b9f9e946ea8bd1955c57d5d391ff1cc728aa8963"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -289,8 +257,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">The Missing Cryptoqueen</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">The Missing Cryptoqueen</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>BBC Radio</span>
           </div>
         </div>
@@ -299,14 +267,7 @@
     </div>
 
     <!-- Artist cards -->
-    <div
-      style="
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        grid-gap: 24px;
-      "
-    >
+    <div style="padding: 8px;" class="cg__container">
       <!-- Artist Card -->
       <!-- Future - Artist -->
       <div class="card">
@@ -318,9 +279,7 @@
               src="https://i.scdn.co/image/fa9015ca2bf85af90b967500148da9706a156e3b"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -330,8 +289,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Future</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Future</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>Artist</span>
           </div>
         </div>
@@ -348,9 +307,7 @@
               src="https://i.scdn.co/image/f90fa16ee1abf2da267873d302af1b5b4650f8d9"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -360,8 +317,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">B Young</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">B Young</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>Artist</span>
           </div>
         </div>
@@ -370,14 +327,7 @@
     </div>
 
     <!-- User card -->
-    <div
-      style="
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        grid-gap: 24px;
-      "
-    >
+    <div style="padding: 8px;" class="cg__container">
       <!-- User Card -->
       <!-- Bastien - User -->
       <div class="card">
@@ -398,8 +348,8 @@
               ></path>
             </svg>
           </div>
-          <h3 class="card__title">Bastien</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Bastien</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>User</span>
           </div>
         </div>

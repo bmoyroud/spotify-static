@@ -224,10 +224,12 @@ body,
 
 body {
   font-family: "spotify-circular";
-  /* font-size: 14px;
+
+  /* used by container subtitle */
+  font-size: 14px;
   letter-spacing: 0.015em;
   color: var(--light-grey);
-  line-height: 20px; */
+  line-height: 20px;
 }
 
 /* h2 {

@@ -10,19 +10,14 @@
     <title>Components - User Card</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/utilities.css" />
-    <link rel="stylesheet" href="/stylesheets/card.css" />
+
     <link rel="stylesheet" href="/stylesheets/button.css" />
+    <link rel="stylesheet" href="/stylesheets/card.css" />
+    <link rel="stylesheet" href="/stylesheets/card-grid.css" />
   </head>
 
   <body>
-    <div
-      style="
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        grid-gap: 24px;
-      "
-    >
+    <div style="padding: 8px;" class="cg__container">
       <!-- User Card -->
       <!-- Bastien - User -->
       <div class="card">
@@ -43,8 +38,8 @@
               ></path>
             </svg>
           </div>
-          <h3 class="card__title">Bastien</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Bastien</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>User</span>
           </div>
         </div>

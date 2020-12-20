@@ -10,19 +10,14 @@
     <title>Components - Artist Card</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/utilities.css" />
-    <link rel="stylesheet" href="/stylesheets/card.css" />
+
     <link rel="stylesheet" href="/stylesheets/button.css" />
+    <link rel="stylesheet" href="/stylesheets/card.css" />
+    <link rel="stylesheet" href="/stylesheets/card-grid.css" />
   </head>
 
   <body>
-    <div
-      style="
-        padding: 8px;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        grid-gap: 24px;
-      "
-    >
+    <div style="padding: 8px;" class="cg__container">
       <!-- Artist Card -->
       <!-- Future - Artist -->
       <div class="card">
@@ -34,9 +29,7 @@
               src="https://i.scdn.co/image/fa9015ca2bf85af90b967500148da9706a156e3b"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -46,8 +39,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">Future</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">Future</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>Artist</span>
           </div>
         </div>
@@ -64,9 +57,7 @@
               src="https://i.scdn.co/image/f90fa16ee1abf2da267873d302af1b5b4650f8d9"
             />
             <div class="card__button-wrapper">
-              <button
-                class="card__button center button--small button--round button--green"
-              >
+              <button class="btn btn--play">
                 <svg height="16" width="16" viewBox="0 0 24 24">
                   <polygon
                     points="21.57 12 5.98 3 5.98 21 21.57 12"
@@ -76,8 +67,8 @@
               </button>
             </div>
           </div>
-          <h3 class="card__title">B Young</h3>
-          <div class="card__subtitle">
+          <h3 class="card__title title1 lc-1">B Young</h3>
+          <div class="card__subtitle subtitle1 lc-2">
             <span>Artist</span>
           </div>
         </div>
