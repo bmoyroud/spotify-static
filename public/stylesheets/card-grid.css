@@ -1,39 +1,39 @@
-.card-grid__header {
+.cg__header {
   display: flex;
   align-items: flex-end;
   margin-bottom: 16px;
 }
 
-.card-grid__titles {
+.cg__titles {
   flex: 1;
 }
 
-.card-grid__title {
+.cg__title {
   line-height: 28px;
 }
 
-.card-grid__title a:hover {
+.cg__title a:hover {
   text-decoration: underline;
 }
 
-.card-grid__see-all {
+.cg__see-all {
   font-size: 12px;
   font-weight: 700;
   color: var(--light-grey);
   text-transform: uppercase;
 }
 
-.card-grid__see-all:hover {
+.cg__see-all:hover {
   text-decoration: underline;
 }
 
-.card-grid__container {
+.cg__container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   grid-gap: 24px;
 }
 
-.card-grid__container--collapsed {
+.cg__container--collapsed {
   column-gap: 24px;
   row-gap: 0px;
   grid-template-rows: 1fr;

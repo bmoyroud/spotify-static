@@ -42,10 +42,17 @@
   border-radius: 50%;
 }
 
+/* wrapper is necessary to have 2 separate transforms on wrapper and on button */
 .card__button-wrapper {
   position: absolute;
+  /* button must be above a tag covering all card */
+  z-index: 2;
   bottom: 8px;
   right: 8px;
+
+  border-radius: 50%;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
+
   /* transition */
   opacity: 0;
   transform: translateY(8px);
@@ -53,33 +60,16 @@
   transition-duration: 0.3s;
 }
 
-.card__button {
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3);
-}
-
 .card:hover .card__button-wrapper {
   opacity: 1;
   transform: translateY(0px);
 }
 
-.card__button:hover {
-  transform: scale(1.06);
-}
-
 .card__title {
   margin-bottom: 4px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 1;
 }
 
 .card__subtitle {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 2;
-
   /* for artist links to be clickable */
   position: relative;
   z-index: 1;
@@ -90,10 +80,10 @@
   margin: 0 4px;
 }
 
-.card__subtitle-link {
+/* .card__subtitle-link {
   color: var(--light-grey);
-}
+} */
 
-.card__subtitle-link:hover {
+/* .card__subtitle-link:hover {
   text-decoration: underline;
-}
+} */
