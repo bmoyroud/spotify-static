@@ -1,32 +1,41 @@
-:root {
-  --left-sidebar-padding-left: 24px;
-  --left-sidebar-padding-right: 24px;
-  --black: #121212;
-  --light-grey: #b3b3b3;
-  --dark-grey: #282828;
+/* RESET */
+/* based off Tailwind - preflight */
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* end preflight */
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  height: 100vh;
-  background-color: var(--black);
-}
-
-body,
-#root {
-  height: 100%;
-  margin: 0px;
-}
-
-body {
-  font-size: 14px;
-  font-family: "spotify-circular";
-  letter-spacing: 0.015em;
-  color: var(--light-grey);
-  line-height: 20px;
 }
 
 /* https://stackoverflow.com/a/42421490/4658957 */
@@ -44,206 +53,18 @@ textarea {
 }
 
 button {
-  /* color: #fff; */
   padding: 0;
   border: 0;
   background: none;
 }
 
 a {
-  /* TODO: do we apply color here? */
   color: #fff;
   text-decoration: none;
 }
+/* End RESET */
 
-h1,
-h2,
-h3 {
-  color: #fff;
-  letter-spacing: -0.04em;
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 16px;
-  font-weight: 700;
-}
-
-/* TODO: set this as default? default color and default weight? */
-span {
-  /* color: #fff; */
-  font-size: 14px;
-  font-weight: 400;
-}
-
-span.bold {
-  letter-spacing: normal;
-  font-weight: 700;
-}
-
-/* TODO: add reset */
-ul,
-ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  height: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  grid-template-columns: auto 1fr;
-  grid-template-areas:
-    "nav-bar main-view buddy-feed"
-    "player player player";
-}
-
-.main-view {
-  position: relative;
-  background-color: var(--black);
-  grid-area: main-view;
-  overflow-y: auto;
-}
-
-.positioning-reference {
-  position: relative;
-  width: 100%;
-  height: 0;
-}
-
-.spacer {
-  position: sticky;
-  top: 0;
-  height: 60px;
-}
-
-.content {
-  /* padding: 16px 32px; */
-  /* padding: 0px 32px; */
-  padding: 0px 32px 32px 32px;
-}
-
-/* TODO: where is this used? */
-.content .card-grid:not(:last-child) {
-  margin-bottom: 32px;
-}
-
-.content--padding-top {
-  padding: 16px 32px 32px 32px;
-}
-
-.content--below-header {
-  /* needed to position background in header */
-  position: relative;
-  z-index: 1;
-}
-
-.content__background {
-  height: 232px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), #121212);
-  position: absolute;
-  top: 0;
-  width: 100%;
-  /* margin: 0px -32px; */
-}
-
-.recently-played {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  grid-gap: 24px;
-}
-
-/* PLAYLIST PAGE page (e.g. /collection/tracks or /playlist/37i9dQZF1DX742okrrpwah) */
-.playlist-header {
-  display: flex;
-}
-
-.playlist-header > img {
-  height: 232px;
-  width: 232px;
-  margin-right: 16px;
-}
-
-.playlist-header-info {
-  align-self: end;
-  /* TODO: explain why display: flex is necessary here 
-  display: flex only applies to children (direct descendants) not descendants
-  https://stackoverflow.com/a/14151015/4658957 */
-  display: flex;
-  flex-direction: column;
-}
-
-.playlist-header-info > h2 {
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.playlist-header-info > h1 {
-  padding: 0.08em 0px;
-  font-size: 96px;
-}
-
-.playlist-header-details {
-  display: flex;
-}
-
-.playlist-header-details > a {
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-}
-
-.playlist-header-details > a:hover {
-  text-decoration: underline;
-}
-
-.playlist-header-details > span::before {
-  content: "•";
-  margin: 0 4px;
-}
-
-.playlist-play-button {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-.playlist-play-button button {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  border-radius: 500px;
-  opacity: 1;
-  background-color: #1db954;
-  height: 56px;
-  width: 56px;
-}
-
-.playlist-play-button button:hover {
-  transform: scale(1.06);
-}
-
-/* Fonts */
-/* TODO: is this used? */
-@font-face {
-  font-family: spotify-circular;
-  src: url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Light.afd9ab26.woff2)
-      format("woff2"),
-    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Light.2a78c017.woff)
-      format("woff"),
-    url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Light.89e4be2e.ttf)
-      format("truetype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* FONTS */
 @font-face {
   font-family: spotify-circular;
   src: url(https://open.scdn.co/cdn/fonts/CircularSpUIv3T-Book.3466e0ec.woff2)
@@ -282,3 +103,217 @@ ol {
   font-style: normal;
   font-display: swap;
 }
+/* End FONTS */
+
+/* COLORS TODO */
+:root {
+  --left-sidebar-padding-left: 24px;
+  --left-sidebar-padding-right: 24px;
+  --black: #121212;
+  --light-grey: #b3b3b3;
+  --dark-grey: #282828;
+}
+/* End Colors */
+
+/* TYPOGRAPHY */
+.heading-2xl {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 96px;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.heading-xl {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3em;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.heading-lg {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.heading-base {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.heading-sm {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.015em;
+  color: #fff;
+}
+
+.title1 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+.title2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+.subtitle1 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+  color: #b3b3b3;
+}
+
+.subtitle2 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: normal;
+  color: #b3b3b3;
+}
+
+.capitalized {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.capitalized-bold {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* End TYPOGRAPHY */
+
+html {
+  height: 100vh;
+  background-color: var(--black);
+}
+
+body,
+#root {
+  height: 100%;
+  margin: 0px;
+}
+
+body {
+  font-family: "spotify-circular";
+  /* font-size: 14px;
+  letter-spacing: 0.015em;
+  color: var(--light-grey);
+  line-height: 20px; */
+}
+
+/* h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+  color: #b3b3b3;
+}
+
+span.bold {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: normal;
+  color: #b3b3b3;
+} */
+
+/* LAYOUT */
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "nav-bar main-view buddy-feed"
+    "player player player";
+}
+
+.main-view {
+  position: relative;
+  background-color: var(--black);
+  grid-area: main-view;
+  overflow-y: auto;
+}
+
+.positioning-reference {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+.spacer {
+  position: sticky;
+  top: 0;
+  height: 60px;
+}
+
+.content {
+  padding: 0px 32px 32px 32px;
+}
+
+.content--padding-top {
+  padding: 16px 32px 32px 32px;
+}
+
+.content--below-header {
+  /* needed to position background in header */
+  position: relative;
+  z-index: 1;
+}
+
+.content__background {
+  height: 232px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), #121212);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* margin: 0px -32px; */
+}
+
+.recently-played {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 24px;
+}
+/* END LAYOUT */

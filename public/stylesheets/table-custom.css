@@ -18,6 +18,7 @@
 }
 
 .track__btn {
+  display: flex;
   color: #fff;
   visibility: hidden;
 }
@@ -39,6 +40,11 @@
 
 .track__cover {
   margin-right: 16px;
+}
+
+.track__wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .track__name {

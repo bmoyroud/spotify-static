@@ -1,7 +1,7 @@
-.action-bar {
-  /* padding: 24px 32px; */
+.ab {
   padding: 24px 0px;
+}
 
-  display: flex;
-  align-items: center;
+.ab__btn {
+  margin-right: 24px;
 }

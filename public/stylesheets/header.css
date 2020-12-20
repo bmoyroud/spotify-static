@@ -6,6 +6,7 @@
   display: flex;
   align-items: end;
   padding: 0 32px 24px 32px;
+  position: relative;
 }
 
 .header--small {
@@ -13,6 +14,10 @@
   min-height: 250px;
   max-height: 400px;
 }
+
+/* .header--big {
+  height: 40vh;
+} */
 
 .header__background {
   position: absolute;
@@ -24,6 +29,11 @@
 
 .header__background--gradient {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+.header__background--image {
+  background-size: cover;
+  background-position-y: 20%;
 }
 
 .header__content {
@@ -77,6 +87,16 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
+}
+
+.header__verified-artist-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__verified-artist {
+  color: #fff;
+  margin-left: 4px;
 }
 
 .header__type {

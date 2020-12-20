@@ -80,6 +80,7 @@
   overflow: hidden;
   -webkit-line-clamp: 2;
 
+  /* for artist links to be clickable */
   position: relative;
   z-index: 1;
 }
@@ -90,7 +91,6 @@
 }
 
 .card__subtitle-link {
-  font-size: 14px;
   color: var(--light-grey);
 }
 

@@ -1,69 +1,63 @@
-.button {
-  /* TODO: should the below be here or only in button--round */
+.btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 24px;
 }
 
-.button--round {
+/* Follow, Following buttons */
+.btn--rounded {
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+  border-radius: 4px;
+  padding: 7px 15px;
+}
+
+.btn--rounded:hover,
+.btn--rounded-active {
+  border-color: #fff;
+}
+
+.btn--play {
   border: 0;
   border-radius: 50%;
-}
-
-.button--round:hover {
-  transform: scale(1.06);
-}
-
-.button--grey {
-  color: hsla(0, 0%, 100%, 0.6);
-}
-
-.button--grey:hover {
-  color: hsla(0, 0%, 100%, 1);
-}
-
-.button--green {
   color: #fff;
   background-color: #1db954;
-}
-
-.button--small {
   height: 40px;
   width: 40px;
 }
 
-.button--medium {
+.btn--play:hover {
+  transform: scale(1.06);
+}
+
+.btn--like {
+  color: #fff;
+}
+
+.btn--like-active {
+  color: #1db954;
+}
+
+/* Colors */
+.btn--grey {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.btn--grey:hover {
+  color: hsla(0, 0%, 100%, 1);
+}
+
+/* Sizes */
+.btn--sm {
   height: 48px;
   width: 48px;
 }
 
-.button--big {
+.btn--md {
   height: 56px;
   width: 56px;
-  margin-right: 32px;
 }
 
-.button-like--empty {
-  color: #fff;
-}
-
-.button-like--filled {
-  color: #1db954;
-}
-
-.button-follow {
-  border: 1px solid hsla(0, 0%, 100%, 0.3);
-  border-radius: 4px;
-  padding: 7px 15px;
-
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.button-follow:hover {
-  border-color: #fff;
+.btn--lg {
+  height: 64px;
+  width: 64px;
 }
