@@ -2,8 +2,9 @@
   grid-area: player;
   height: 90px;
   width: 100%;
-  background-color: #282828;
   padding: 0px 16px;
+  background-color: #282828;
+
   /* center contents vertically */
   display: flex;
   align-items: center;
@@ -31,6 +32,7 @@
 }
 
 .player__title {
+  color: #fff;
   /* for text-overflow to work */
   display: block;
   width: 100%;
@@ -123,6 +125,7 @@
 }
 
 .player__playback-time {
+  cursor: default;
   font-size: 11px;
   min-width: 40px;
   text-align: center;
