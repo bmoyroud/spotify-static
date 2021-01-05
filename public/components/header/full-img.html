@@ -12,160 +12,209 @@
     <link rel="stylesheet" href="/stylesheets/button.css" />
     <link rel="stylesheet" href="/stylesheets/top-bar.css" />
     <link rel="stylesheet" href="/stylesheets/header.css" />
+
+    <style>
+      :root {
+        --bg-color: rgb(248, 240, 0);
+      }
+    </style>
   </head>
 
   <body>
-    <div id="root">
-      <div class="container">
-        <header class="top-bar">
-          <!-- Top bar backgrounds -->
-          <div
-            class="top-bar__background"
-            style="background-color: rgb(248, 240, 0);"
-          ></div>
-          <div
-            class="top-bar__background"
-            style="background-color: rgba(0, 0, 0, 0.6);"
-          ></div>
+    <div class="container">
+      <header class="top-bar">
+        <!-- Top bar backgrounds -->
+        <div
+          class="top-bar__background"
+          style="background-color: var(--bg-color);"
+        ></div>
+        <div
+          class="top-bar__background"
+          style="background-color: rgba(0, 0, 0, 0.6);"
+        ></div>
 
-          <!-- Top bar buttons (left) -->
-          <button class="top-bar__button" title="Go back">
-            <svg height="24" width="24" viewBox="0 0 24 24">
-              <polyline
-                points="16 4 7 12 16 20"
-                fill="none"
-                stroke="#fff"
-              ></polyline>
+        <!-- Top bar buttons (left) -->
+        <button class="btn top-bar__button" title="Go back">
+          <svg height="24" width="24" viewBox="0 0 24 24">
+            <polyline
+              points="16 4 7 12 16 20"
+              fill="none"
+              stroke="#fff"
+            ></polyline>
+          </svg>
+        </button>
+        <button class="btn top-bar__button" title="Go forward" disabled>
+          <svg height="24" width="24" viewBox="0 0 24 24">
+            <polyline
+              points="8 4 17 12 8 20"
+              fill="none"
+              stroke="#fff"
+            ></polyline>
+          </svg>
+        </button>
+
+        <!-- Top bar content (middle) -->
+        <div class="top-bar__content">
+          <!-- Play / Pause button -->
+          <button class="btn btn--play btn--xs top-bar__content-button">
+            <svg height="16" width="16" viewBox="0 0 24 24">
+              <polygon
+                points="21.57 12 5.98 3 5.98 21 21.57 12"
+                fill="currentColor"
+              ></polygon>
             </svg>
           </button>
-          <button class="top-bar__button" title="Go forward" disabled>
-            <svg height="24" width="24" viewBox="0 0 24 24">
-              <polyline
-                points="8 4 17 12 8 20"
-                fill="none"
-                stroke="#fff"
-              ></polyline>
-            </svg>
-          </button>
+          <h2 class="top-bar__title heading-base">Falco</h2>
+        </div>
 
-          <!-- Top bar content (middle) -->
-          <div class="top-bar__content">
-            <!-- Play / Pause button -->
-            <button
-              class="top-bar__content-button button--small button--round button--green"
-            >
-              <svg height="16" width="16" viewBox="0 0 24 24">
-                <polygon
-                  points="21.57 12 5.98 3 5.98 21 21.57 12"
-                  fill="currentColor"
-                ></polygon>
+        <!-- Top bar menu (right) -->
+        <div class="top-bar__menu">
+          <!-- Hidden checkbox to toggle dropdown -->
+          <label
+            class="top-bar__menu-checkbox-label"
+            for="top-bar__menu-checkbox"
+          ></label>
+          <input
+            class="top-bar__menu-checkbox"
+            type="checkbox"
+            id="top-bar__menu-checkbox"
+          />
+          <!-- end hidden checkbox -->
+
+          <div class="top-bar__menu-button">
+            <div class="top-bar__avatar">
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 18 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15.216 13.717L12 11.869C11.823 11.768 11.772 11.607 11.757 11.521C11.742 11.435 11.737 11.267 11.869 11.111L13.18 9.57401C14.031 8.58001 14.5 7.31101 14.5 6.00001V5.50001C14.5 3.98501 13.866 2.52301 12.761 1.48601C11.64 0.435011 10.173 -0.0879888 8.636 0.0110112C5.756 0.198011 3.501 2.68401 3.501 5.67101V6.00001C3.501 7.31101 3.97 8.58001 4.82 9.57401L6.131 11.111C6.264 11.266 6.258 11.434 6.243 11.521C6.228 11.607 6.177 11.768 5.999 11.869L2.786 13.716C1.067 14.692 0 16.526 0 18.501V20H1V18.501C1 16.885 1.874 15.385 3.283 14.584L6.498 12.736C6.886 12.513 7.152 12.132 7.228 11.691C7.304 11.251 7.182 10.802 6.891 10.462L5.579 8.92501C4.883 8.11101 4.499 7.07201 4.499 6.00001V5.67101C4.499 3.21001 6.344 1.16201 8.699 1.00901C9.961 0.928011 11.159 1.35601 12.076 2.21501C12.994 3.07601 13.5 4.24301 13.5 5.50001V6.00001C13.5 7.07201 13.117 8.11101 12.42 8.92501L11.109 10.462C10.819 10.803 10.696 11.251 10.772 11.691C10.849 12.132 11.115 12.513 11.503 12.736L14.721 14.585C16.127 15.384 17.001 16.884 17.001 18.501V20H18.001V18.501C18 16.526 16.932 14.692 15.216 13.717Z"
+                ></path>
               </svg>
-            </button>
-            <h2 class="top-bar__title">Falco</h2>
+            </div>
+            <span class="top-bar__user subtitle2">1112804243</span>
+            <svg height="16" width="16" viewBox="0 0 16 16">
+              <path d="M3 6l5 5.794L13 6z" fill="#fff"></path>
+              <!-- <path d="M13 10L8 4.206 3 10z" fill="#fff"></path> -->
+            </svg>
           </div>
 
-          <!-- Top bar menu (right) -->
-          <div class="top-bar__menu">
-            <div class="top-bar__menu-button">
-              <div class="top-bar__avatar">
-                <svg
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  viewBox="0 0 18 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+          <ul class="top-bar__dropdown">
+            <li>
+              <a class="top-bar__dropdown-item" href="/account">Account</a>
+            </li>
+            <li>
+              <a class="top-bar__dropdown-item" href="/account">Profile</a>
+            </li>
+            <li>
+              <div class="top-bar__dropdown-separator"></div>
+            </li>
+            <li><button class="top-bar__dropdown-item">Log out</button></li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="main-view">
+        <section class="header">
+          <!-- Backgrounds -->
+          <div
+            class="header__background header__background--image"
+            style="
+              background-color: var(--bg-color);
+              /* add background-image via JS? */
+              background-image: url('https://i.scdn.co/image/e1f917ce50e81664bfcb9a3767b2c1debd182266');
+            "
+          ></div>
+          <div class="header__background header__background--gradient"></div>
+          <!-- End backgrounds -->
+
+          <div class="header__content">
+            <div class="header__details">
+              <div class="header__verified-artist-wrapper">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path
-                    d="M15.216 13.717L12 11.869C11.823 11.768 11.772 11.607 11.757 11.521C11.742 11.435 11.737 11.267 11.869 11.111L13.18 9.57401C14.031 8.58001 14.5 7.31101 14.5 6.00001V5.50001C14.5 3.98501 13.866 2.52301 12.761 1.48601C11.64 0.435011 10.173 -0.0879888 8.636 0.0110112C5.756 0.198011 3.501 2.68401 3.501 5.67101V6.00001C3.501 7.31101 3.97 8.58001 4.82 9.57401L6.131 11.111C6.264 11.266 6.258 11.434 6.243 11.521C6.228 11.607 6.177 11.768 5.999 11.869L2.786 13.716C1.067 14.692 0 16.526 0 18.501V20H1V18.501C1 16.885 1.874 15.385 3.283 14.584L6.498 12.736C6.886 12.513 7.152 12.132 7.228 11.691C7.304 11.251 7.182 10.802 6.891 10.462L5.579 8.92501C4.883 8.11101 4.499 7.07201 4.499 6.00001V5.67101C4.499 3.21001 6.344 1.16201 8.699 1.00901C9.961 0.928011 11.159 1.35601 12.076 2.21501C12.994 3.07601 13.5 4.24301 13.5 5.50001V6.00001C13.5 7.07201 13.117 8.11101 12.42 8.92501L11.109 10.462C10.819 10.803 10.696 11.251 10.772 11.691C10.849 12.132 11.115 12.513 11.503 12.736L14.721 14.585C16.127 15.384 17.001 16.884 17.001 18.501V20H18.001V18.501C18 16.526 16.932 14.692 15.216 13.717Z"
+                    d="M12 21.6596l-3.38079 1.8543-1.84158-3.3877-3.84662-.2679.28231-3.8456-3.09118-2.3049 2.31658-3.0825-1.3543-3.61028 3.61534-1.34071.81255-3.76935 3.76627.82672L12 0l2.7214 2.73168 3.7663-.82672.8125 3.76935 3.6154 1.34071-1.3543 3.61028 2.3166 3.0825-3.0912 2.3049.2823 3.8456-3.8466.2679-1.8416 3.3877L12 21.6596z"
+                    fill="#2E77D0"
+                  ></path>
+                  <path
+                    d="M16.8637 7.41226l-6.6435 7.77824-2.80421-3.2842-.4935.5775 3.29771 3.8617 7.2135-8.44649-.57-.48675z"
+                    fill="#fff"
                   ></path>
                 </svg>
+                <span class="header__verified-artist">Verified Artist</span>
               </div>
-              <span class="top-bar__user">User id</span>
-              <svg height="16" width="16" viewBox="0 0 16 16">
-                <path d="M3 6l5 5.794L13 6z" fill="#fff"></path>
-                <!-- <path d="M13 10L8 4.206 3 10z" fill="#fff"></path> -->
-              </svg>
-            </div>
-            <!-- Hidden checkbox to toggle dropdown -->
-            <label
-              class="top-bar__menu-checkbox-label"
-              for="top-bar__menu-checkbox"
-            ></label>
-            <input
-              class="top-bar__menu-checkbox"
-              type="checkbox"
-              id="top-bar__menu-checkbox"
-            />
-            <ul class="top-bar__dropdown">
-              <li>
-                <a class="top-bar__dropdown-item" href="/account">Account</a>
-              </li>
-              <li>
-                <a class="top-bar__dropdown-item" href="/account">Profile</a>
-              </li>
-              <li>
-                <div class="top-bar__dropdown-separator"></div>
-              </li>
-              <li><button class="top-bar__dropdown-item">Log out</button></li>
-            </ul>
-          </div>
-        </header>
-
-        <main class="main-view">
-          <section class="header">
-            <!-- Backgrounds -->
-            <div
-              class="header__background header__background--image"
-              style="
-                background-color: rgb(248, 240, 0);
-                /* add background-image via JS? */
-                background-image: url('https://i.scdn.co/image/e1f917ce50e81664bfcb9a3767b2c1debd182266');
-              "
-            ></div>
-            <div class="header__background header__background--gradient"></div>
-            <!-- End backgrounds -->
-
-            <div class="header__content">
-              <div class="header__details">
-                <div class="header__verified-artist-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M12 21.6596l-3.38079 1.8543-1.84158-3.3877-3.84662-.2679.28231-3.8456-3.09118-2.3049 2.31658-3.0825-1.3543-3.61028 3.61534-1.34071.81255-3.76935 3.76627.82672L12 0l2.7214 2.73168 3.7663-.82672.8125 3.76935 3.6154 1.34071-1.3543 3.61028 2.3166 3.0825-3.0912 2.3049.2823 3.8456-3.8466.2679-1.8416 3.3877L12 21.6596z"
-                      fill="#2E77D0"
-                    ></path>
-                    <path
-                      d="M16.8637 7.41226l-6.6435 7.77824-2.80421-3.2842-.4935.5775 3.29771 3.8617 7.2135-8.44649-.57-.48675z"
-                      fill="#fff"
-                    ></path>
-                  </svg>
-                  <span class="header__verified-artist">Verified Artist</span>
-                </div>
-                <h1 id="sentinel" class="header__title">Falco</h1>
-                <div class="header__additional-info">
-                  <span class="header__listeners"
-                    >1,772,732 monthly listeners</span
-                  >
-                </div>
+              <h1 id="sentinel" class="header__title heading-2xl">Falco</h1>
+              <div class="header__additional-info">
+                <span class="title2">1,772,732 monthly listeners</span>
               </div>
             </div>
-          </section>
-
-          <!-- Content -->
-          <div class="positioning-reference">
-            <div
-              class="content__background"
-              style="background-color: rgb(248, 240, 0);"
-            ></div>
           </div>
+        </section>
 
-          <div class="content content--below-header">
-            <h1>Content comes now</h1>
-            <p>Content comes now</p>
-            <p>Content comes now</p>
-            <p>Content comes now</p>
-          </div>
-        </main>
-      </div>
+        <!-- Content -->
+        <div class="positioning-reference">
+          <div
+            class="content__background"
+            style="background-color: var(--bg-color);"
+          ></div>
+        </div>
+
+        <div class="content overlap">
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+          <p>Content comes now</p>
+        </div>
+      </main>
     </div>
 
     <script src="/js/top-bar.js"></script>

@@ -220,9 +220,7 @@ html {
 body {
   height: 100%;
   margin: 0px;
-}
 
-body {
   font-family: "spotify-circular";
 
   /* used by container subtitle */
@@ -231,38 +229,6 @@ body {
   color: var(--light-grey);
   line-height: 20px;
 }
-
-/* h2 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  letter-spacing: -0.04em;
-  color: #fff;
-}
-
-h3 {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: normal;
-  color: #fff;
-}
-
-span {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: normal;
-  color: #b3b3b3;
-}
-
-span.bold {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: normal;
-  color: #b3b3b3;
-} */
 
 /* LAYOUT */
 .container {
@@ -302,8 +268,8 @@ span.bold {
   padding: 16px 32px 32px 32px;
 }
 
-.content--below-header {
-  /* needed to position background in header */
+.overlap {
+  /* needed to position content above background in header */
   position: relative;
   z-index: 1;
 }

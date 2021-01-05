@@ -9,7 +9,7 @@
   position: relative;
 }
 
-.header--small {
+.header--sm {
   min-height: 250px;
   max-height: 400px;
 }
@@ -98,9 +98,7 @@
 }
 
 .header__type {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.015em;
+  margin-top: 4px;
 }
 
 .header__title {
@@ -123,11 +121,6 @@
   white-space: pre;
 }
 
-.header__listeners {
-  color: #fff;
-  font-size: 16px;
-}
-
 .header__thumbnail {
   width: 24px;
   height: 24px;
@@ -136,9 +129,5 @@
 }
 
 .header__link {
-  font-weight: 700;
-}
-
-.header__link:hover {
-  text-decoration: underline;
+  color: #fff;
 }
