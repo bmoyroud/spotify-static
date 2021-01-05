@@ -29,7 +29,6 @@
 
 .nav-bar__link {
   padding: 8px 16px;
-  color: #b3b3b3;
   /* center vertically */
   display: flex;
   align-items: center;
@@ -37,11 +36,12 @@
 
 .nav-bar__link:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 .nav-bar__link--active {
-  background-color: #282828;
   color: #fff;
+  background-color: #282828;
   border-radius: 4px;
 }
 
@@ -72,9 +72,6 @@
 
 .nav-bar__playlists-title {
   color: #b3b3b3;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   margin: 0px 24px 12px 24px;
 }
 
@@ -97,6 +94,11 @@
 
 .nav-bar__playlists-link:hover {
   opacity: 1;
+  text-decoration: none;
+}
+
+.nav-bar__playlists-link > span {
+  color: #fff;
 }
 
 .nav-bar__playlists-icon-wrapper {
@@ -124,11 +126,17 @@
 }
 
 .nav-bar__user-playlist {
-  cursor: default;
-  color: #b3b3b3;
   line-height: 32px;
 }
 
 .nav-bar__user-playlist:hover {
   color: #fff;
+}
+
+.nav-bar__user-playlist-link {
+  cursor: default;
+}
+
+.nav-bar__user-playlist-link:hover {
+  text-decoration: none;
 }
