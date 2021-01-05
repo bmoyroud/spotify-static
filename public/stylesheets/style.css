@@ -28,7 +28,7 @@ h6 {
 
 ol,
 ul {
-  list-style: none;
+  list-style: none; /* remove bullet points */
   margin: 0;
   padding: 0;
 }
@@ -63,6 +63,7 @@ a {
   text-decoration: none;
 }
 
+/* TODO: figure this out */
 a:hover {
   text-decoration: underline;
 }
@@ -216,8 +217,7 @@ html {
   background-color: var(--black);
 }
 
-body,
-#root {
+body {
   height: 100%;
   margin: 0px;
 }

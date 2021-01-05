@@ -15,13 +15,6 @@ const topBarTitle = document.querySelector(".top-bar__title");
 
 const observer = new IntersectionObserver((entries) => {
   console.log(entries);
-  // Note: we only have one target
-  // const { isIntersecting } = entries[0];
-  // console.log(isIntersecting);
-
-  // topBarBackgrounds.forEach((background) =>
-  //   background.classList.toggle("top-bar__background--visible", !isIntersecting)
-  // );
 
   // Note: we only have one target
   const { intersectionRatio } = entries[0];

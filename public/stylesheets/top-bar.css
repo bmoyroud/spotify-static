@@ -24,10 +24,6 @@
   opacity: 0;
 }
 
-/* .top-bar__background--visible {
-  opacity: 1;
-} */
-
 /* BUTTONS (left) */
 .top-bar__button {
   border: 0;
@@ -37,19 +33,13 @@
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.7);
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   margin-right: 16px;
+  stroke-width: 1pt;
 }
 
 .top-bar__button[disabled] {
   cursor: not-allowed;
   opacity: 0.6;
-}
-
-.top-bar__button {
-  stroke-width: 1pt;
 }
 
 /* CONTENT (middle) */
@@ -61,10 +51,6 @@
 }
 
 .top-bar__content-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 16px;
   opacity: 0;
 }
 
@@ -73,6 +59,8 @@
 }
 
 .top-bar__title {
+  padding: 0 16px;
+
   opacity: 0;
   transition-property: opacity;
   transition-duration: 200ms;
@@ -85,7 +73,8 @@
 
 /* Search input */
 .top-bar__search {
-  max-width: 350px;
+  flex: 0 1 350px;
+  color: #121212;
   background: #fff;
   border-radius: 500px;
   display: flex;
@@ -97,13 +86,11 @@
 .top-bar__search-icon {
   position: absolute;
   left: 12px;
-  color: #121212;
 }
 
 .top-bar__search-cancel-icon {
   position: absolute;
   right: 12px;
-  color: #121212;
   /* cancel icon needs to be above input to be clickable */
   z-index: 2;
   /* hide by default */
@@ -120,6 +107,10 @@
   background: transparent;
   /* shows ... in placeholder when input is collapsed */
   text-overflow: ellipsis;
+}
+
+.top-bar__search-input:focus {
+  outline: 0;
 }
 
 /* toggle cancel search icon */
@@ -147,6 +138,10 @@
   font-weight: 700;
 }
 
+.top-bar__tab a:hover {
+  text-decoration: none;
+}
+
 .top-bar__tab--active {
   background-color: #333;
 }
@@ -159,23 +154,23 @@
 }
 
 .top-bar__menu-button {
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 25px;
   padding: 2px;
   /* align items vertically */
   display: flex;
   align-items: center;
-  cursor: pointer;
   margin-left: 16px; /* for dropdown to expand to the left */
+}
+
+.top-bar__menu-checkbox-label:hover ~ .top-bar__menu-button {
+  background-color: #282828;
 }
 
 /* all children */
 .top-bar__menu-button > * {
   margin-right: 8px;
-}
-
-.top-bar__menu-button:hover {
-  background-color: #282828;
 }
 
 .top-bar__menu-checkbox-label {
@@ -192,8 +187,16 @@
   display: none;
 }
 
-.top-bar__menu-checkbox:checked + .top-bar__dropdown {
+.top-bar__menu-checkbox:checked ~ .top-bar__dropdown {
   display: block;
+}
+
+.top-bar__menu-checkbox:checked ~ .top-bar__menu-button {
+  background-color: #282828;
+}
+
+.top-bar__menu-checkbox-label:focus ~ .top-bar__menu-button {
+  background-color: #282828;
 }
 
 .top-bar__avatar {
@@ -208,8 +211,6 @@
 }
 
 .top-bar__user {
-  font-size: 14px;
-  font-weight: 700;
   color: #fff;
 }
 
@@ -222,7 +223,6 @@
   background-color: #282828;
   border-radius: 4px;
   width: 100%;
-  list-style: none; /* remove bullet points */
   padding: 4px;
   cursor: default;
 }
@@ -248,6 +248,7 @@
 .top-bar__dropdown-item:hover {
   color: #fff;
   background-color: hsla(0, 0%, 100%, 0.1);
+  text-decoration: none;
 }
 
 .top-bar__dropdown-separator {

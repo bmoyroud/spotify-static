@@ -10,7 +10,6 @@
 }
 
 .header--small {
-  /* height: 30vh; */
   min-height: 250px;
   max-height: 400px;
 }
@@ -78,7 +77,6 @@
 .header__img-wrapper svg {
   width: 64px;
   height: 64px;
-  /* TODO: create colors.css */
   color: #7f7f7f;
 }
 
@@ -106,9 +104,6 @@
 }
 
 .header__title {
-  font-size: 96px;
-  line-height: 96px;
-  font-weight: 900;
   padding: 4px 0px 8px 0px;
 }
 
